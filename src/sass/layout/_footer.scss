@@ -1,0 +1,108 @@
+.footer{
+	@include font-size(12px);
+	color: #fff;
+	background: $dark;
+	min-height: 350px;
+	font-family: 'ubuntulight';
+	&__logo{
+		&-link{
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 10px;
+		}
+		&-wrap{
+			padding: 113.5px 0;
+			float: left;
+			position: relative;
+		}
+		&-img{
+			width: 123px;
+			height: 123px;
+			float: left;
+		}
+		&-dscr{
+			@include font-size(14px);
+		    font-family: 'ubuntumedium';
+			width: 120px;
+			color: #858990;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	&__service{
+
+		&-items{
+			padding-top: 40px;
+			float: right;
+			width: 870px;
+			display: inline-block;
+			text-align: justify;
+			&:last-child:after{
+				content: '';
+				width: 100%;
+				display: inline-block;
+			}
+		}
+		&-title{
+			&--mb{
+				margin-bottom: 25px;
+			}
+		}
+		&-dscr{
+			line-height: 25px;
+			margin-bottom: 15px;
+			@include clearfix();
+		}
+		&-item{
+			display: inline-block;
+			position: relative;
+			text-align: left;
+			vertical-align: top;
+			&--addr{
+				width: 190px;
+			}
+			&--about{
+				width: 100px;
+			}
+			.h4{
+				color: #fff;
+			}
+		}
+
+	}
+}
+.service{
+	&__list-1,
+	&__list-2{
+		width: 175px;
+		float: left;
+	}
+	&__list-1{
+		margin-right: 35px;
+	}
+}
+.social{
+	&__list{
+		margin-bottom: 15px;
+	}
+	&__item{
+		display: inline-block;
+		margin-right: 14px;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+	&__link{
+		background-image: url('../img/icons/soc-icons.png');
+		background-repeat: no-repeat;
+		width: 32px;
+		height: 32px;
+		display: block;
+		&_fb{
+			background-position: -5px -5px;
+		}
+		&_vk{
+			background-position: -47px -5px;
+		}
+	}
+}
