@@ -14,10 +14,20 @@ main{
 		font-size: .2em;
 	}
 }
+*{
+	box-sizing: border-box;
+}
 .container {
+	min-width: 1200px;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 15px;
+}
+.container-inner{
+	min-width: 980px;
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 0 30px;
 }
 
 
