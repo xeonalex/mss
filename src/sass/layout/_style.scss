@@ -42,13 +42,19 @@ body{
     font-family: 'ubuntulight';
 	@include font-size(14px);
 }
-main{
-}
+
 .container {
+	min-width: 1200px;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 15px;
 	@include clearfix();
+}
+.container-inner{
+	min-width: 980px;
+	max-width: 980px;
+	margin: 0 auto;
+	padding: 0 30px;
 }
 
 

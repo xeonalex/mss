@@ -1,8 +1,10 @@
 .partners{
 	min-height: 640px;
-	outline: 1px solid red;
 	&__title{
 		text-align: center;
+	}
+	.container {
+		padding-top: 60px;
 	}
 }
 .gallery{
@@ -33,7 +35,7 @@
 		}
 		.img-wrap{
 			width: 980px;
-			.img-item{	
+			.img-item{
 				width: 200px !important;
 				height: 80px !important;
 				display: inline-block;

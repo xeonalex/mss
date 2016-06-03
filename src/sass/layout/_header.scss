@@ -219,6 +219,19 @@
 	}
 }
 
+.inner-drop-menu{
+	padding: 20px 0 10px;
+	.inner-drop-menu__li{
+		display: block;
+	}
+	.inner-drop-menu__link{
+		display: block;
+		padding: 0 18px;
+		&:hover{
+		    background: #e9fcf2;
+		}
+	}
+}
 
 
 
