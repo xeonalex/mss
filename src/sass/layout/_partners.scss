@@ -1,0 +1,48 @@
+.partners{
+	min-height: 640px;
+	outline: 1px solid red;
+	&__title{
+		text-align: center;
+	}
+}
+.gallery{
+
+	&-wrap{
+		width: 980px;
+		margin: 0 auto;
+		padding: 0 30px;
+	}
+	&-banners{
+		.owl-stage{
+			margin-left: 80px;
+		}
+		.owl-dots{
+			margin-top: 40px;
+			text-align: center !important;
+		}
+		.owl-dot{
+			width: 44px;
+			height: 8px;
+			background: #bef8d8;
+			display: inline-block;
+			margin-right: 22px;
+			border-radius: 3px;
+		}
+		.owl-dot.active{
+			background: #6beea7;
+		}
+		.img-wrap{
+			width: 980px;
+			.img-item{	
+				width: 200px !important;
+				height: 80px !important;
+				display: inline-block;
+				margin-bottom: 45px;
+				img{
+					width: auto;
+					height: auto;
+				}
+			}
+		}
+	}
+}
