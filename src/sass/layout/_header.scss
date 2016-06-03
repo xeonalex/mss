@@ -1,0 +1,74 @@
+.menu-line {
+	background: #f9f9fa;
+	min-height: 45px;
+	position: relative;
+	.container {
+		background: #f9f9fa;
+	}
+	.white-block {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		background: #fff;
+		z-index: 2;
+		left: 0;
+		width: 29.1666666666666%;
+
+	}
+	.white-block:before{
+		content: '';
+		position: absolute;
+		right: -23px;
+		top: 0;
+		bottom: 0;
+		width: 24px;
+		background: url('../img/icons/triangle_header.svg') no-repeat;
+		background-size: cover;
+	}
+	.navigation-wrap {
+		padding-left: 332px;
+		position: relative;
+		&:before{
+			display: inline-block;
+			content: '';
+		}
+	}
+}
+.main-menu {
+	color: #434a54;
+    font-family: 'ubuntumedium';
+	list-style: none;
+	font-size: 0px;
+	display: inline-block;
+	&__li{
+		font-size: 16px;
+		display: inline-block;
+		margin: 0 19px;
+		&:last-of-type{
+			margin-right: 0;
+		}
+	}
+	margin: 0;
+
+}
+.search {
+	position: relative;
+	display: inline-block;
+	&_input {
+		@include border-radius(10px);
+		border: 1px solid #e6e9ed;
+		height: 22px;
+		padding: 0 14px 0 28px;
+		&:focus {
+			outline: none;
+		}
+	}
+	&_subm {
+		position: absolute;
+		left: 10px;
+		top: 4px;
+		width: 13px;
+		height: 13px;
+		background: url('../img/icons/search.svg');
+	}
+}

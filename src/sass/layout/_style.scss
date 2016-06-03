@@ -1,0 +1,23 @@
+h1{
+	font-size: 2em;
+}
+*{
+	box-sizing: border-box;
+}
+body{
+	font-size: 14px;
+}
+main{
+}
+@include breakpoint(1024){
+	h1{
+		font-size: .2em;
+	}
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+
