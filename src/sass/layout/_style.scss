@@ -1,23 +1,54 @@
-h1{
-	font-size: 2em;
+.h1{
+	@include font-size(40px);
+    font-family: 'ubuntulight';
+    display: inline-block;
+    position: relative;
+    margin-bottom: 55px;
+    &:after{
+		content: '';
+		position: absolute;
+		border-bottom: 2px solid #009573;
+        top: 100%;
+        bottom: 0;
+        left: 50%;
+		width: 100%;
+		margin: 15px 0 0 -50%;
+    }
+}
+.h2{
+	@include font-size(24px);
+    font-family: 'ubuntumedium';
+	color: #434a54;
+}
+.h3{
+	font-family: 'ubuntubold';
+	@include font-size(16px);
+	color: #2fa377;
+}
+.h4{
+    font-family: 'ubuntubold';
+    @include font-size(14px);
+	color: #434a54;
+}
+.link-btn{
+	font-family: 'ubuntubold';
+	@include font-size(16px);
+	color: #143d42;
 }
 *{
 	box-sizing: border-box;
 }
 body{
-	font-size: 14px;
+    font-family: 'ubuntulight';
+	@include font-size(14px);
 }
 main{
-}
-@include breakpoint(1024){
-	h1{
-		font-size: .2em;
-	}
 }
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 0 15px;
+	@include clearfix();
 }
 
 

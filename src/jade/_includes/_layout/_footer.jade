@@ -1,1 +1,62 @@
-footer
+-var service_1 = ['Сертификация систем менеджмента качества', 'Сертификация систем безопасности', 'Сертификация социальной ответственности и защиты окружающей среды', 'Сертификат соответствия на персонал и услуги', 'Допуски СРО'];
+-var service_2 = ['Внедрение ISO, разработка документации', 'Сертификаты Евразийского союза (ТР ТС)', 'Сертификация ГОСТ Р', 'Пожарная сертификация', 'Банковские гарантии', 'Лицензирование', 'Повышение квалификации'];
+-var about = ['Аккредитация', 'Специалисты','Сертификаты', 'Отзывы', 'Партнеры', 'Вакансии', 'Реквизиты'];
+include _partners
+footer.footer
+	.container
+		.footer__logo-wrap
+			a(href="#").footer__logo-link
+				img.footer__logo-img(src="img/icons/logo-footer2.svg", alt="")
+			p.footer__logo-dscr
+				| Международная Система Сертификации
+		.footer__service-items
+			.footer__service-item
+				.footer__service-title.footer__service-title--mb
+					h4.h4
+						| Услуги
+				.footer__service-dscr
+					ul.service__list-1
+						-for (var i = 0; i < service_1.length; i++)
+							li.service__item
+								a(href='#' alt='#{service_1[i]}') #{service_1[i]}
+					ul.service__list-2
+						-for (var i = 0; i < service_2.length; i++)
+							li.service__item
+								a(href='#' alt='#{service_2[i]}') #{service_2[i]}
+			.footer__service-item.footer__service-item--about
+				.footer__service-title.footer__service-title--mb
+					h4.h4
+						| О компании
+				.footer__service-dscr
+					ul.service__list
+						-for (var i = 0; i < about.length; i++)
+							li.service__item
+								a(href='#' alt='#{about[i]}') #{about[i]}
+			.footer__service-item.footer__service-item--addr
+				.footer__service-dscr
+					h4.h4
+						| Адрес
+					p
+						| Санкт-Петербург, пр. Обуховской Обороны, д. 86, лит. К
+				.footer__service-dscr
+					h4.h4
+						| Телефоны
+					a(href="tel:88129205990")
+						| 8 (812)  920 59 90
+				.footer__service-dscr
+					h4.h4
+						| E-mail:
+					a(href="mailto:88129205990")
+						| mss-standart@mail.ru
+				ul.social__list
+					li.social__item
+						a.social__link.social__link_fb(href="#")
+					li.social__item
+						a.social__link.social__link_vk(href="#")
+				a(href="#").check-status
+					h4.h4
+						| Проверить статус сертификата в реестре
+
+						
+
+				
