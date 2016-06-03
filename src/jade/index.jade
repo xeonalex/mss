@@ -26,4 +26,44 @@ block main
 								| Заказать
 							a.slider-details(href='#' alt='Подробнее')
 								|Подробнее
+	.last-news-wrap
+		.container
+			.news-wrap
+				-for(var j=1;j<=3;j++)
+					.news-block
+						.news__img-line
+							.news-img
+								img(src='img/news.jpg' alt='news')
+							.news__img-line_datails
+								.news-date 21.02.2016
+								.news-title Заголовок статьи
+						.news__content-wrap
+							.news__content
+								| Идейные соображения высшего порядка, а также сложившаяся
+								| структура организации играет важную роль в формировании
+								| модели развития. Значимость этих проблем настолько очевидна,
+								| что новая модель организационной
+								a.more-links(href='#' alt='больше') ...
+				a(href='#' alt='читать все').read-all
+					| Читать все новости
+
+
+			.publications-wrap
+				-for(var j=1;j<=3;j++)
+					.news-block
+						.news__img-line
+							.news-img
+								img(src='img/news.jpg' alt='news')
+							.news__img-line_datails
+								.news-date 21.02.2016
+								.news-title Заголовок статьи
+						.news__content-wrap
+							.news__content
+								| Идейные соображения высшего порядка, а также сложившаяся
+								| структура организации играет важную роль в формировании
+								| модели развития. Значимость этих проблем настолько очевидна,
+								| что новая модель организационной
+								a.more-links(href='#' alt='больше')
+				a(href='#' alt='читать все').read-all
+					| Читать все публикации
 
