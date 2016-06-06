@@ -245,6 +245,9 @@
 	position: relative;
 	cursor: pointer;
 	@include border-radius(4px);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
 	&:after {
 		content: '';
 		display: inline-block;

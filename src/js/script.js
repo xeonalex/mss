@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$('.init_block').on('click', function(event) {
 		event.preventDefault();
-    $(this).next().slideToggle();
+    $(this).next().stop(true, true).slideToggle();
     $(this).toggleClass('init_activated');
 	});
 
