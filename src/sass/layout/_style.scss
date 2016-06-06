@@ -42,6 +42,12 @@ body{
     font-family: 'ubuntulight';
 	@include font-size(14px);
 }
+.wrapper{
+	min-width: 1200px;
+	background: url(../img/bg.svg);
+	-webkit-background-size: cover;
+	background-size: cover;
+}
 
 .container {
 	min-width: 1200px;

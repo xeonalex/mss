@@ -1,8 +1,8 @@
 $(document).ready(function(){
 	$('.init_block').on('click', function(event) {
 		event.preventDefault();
-		$(this).toggleClass('init_activated');
-
+    $(this).next().slideToggle();
+    $(this).toggleClass('init_activated');
 	});
 
 	$('.carousel-main').owlCarousel({
