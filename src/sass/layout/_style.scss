@@ -1,4 +1,12 @@
 .h1{
+	@include font-size(50px);
+	font-family: 'ubuntulight';
+	margin-bottom: 70px;
+	display: block;
+	font-weight: normal;
+	line-height: 70px;
+}
+.h1-und{
 	@include font-size(40px);
     font-family: 'ubuntulight';
     display: inline-block;
