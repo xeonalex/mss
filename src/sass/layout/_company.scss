@@ -1,0 +1,32 @@
+.breadcrumbs{
+    font-family: 'ubuntulight';
+	@include font-size(14px);
+	margin-bottom: 31px;
+	padding-top: 18px;
+
+	.breadcrumbs__list{
+		display: inline-block;
+	}
+	.breadcrumbs__item{
+		display: inline-block;
+	}
+	.breadcrumbs__link{
+		&:hover{
+			text-decoration: underline;
+		}
+		&:after{
+			display: block;
+			float: right;
+			content: "/";
+			margin-left: 5px;
+		}
+		&_active{
+			&:hover{
+				text-decoration: none;
+			}
+			&:after{
+				content: "";
+			}
+		}
+	}
+}

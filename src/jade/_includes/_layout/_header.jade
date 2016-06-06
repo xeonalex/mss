@@ -1,13 +1,19 @@
--var menu = ['Главная','Новости','Публикации','О компании','Контакты'];
 header.header
 	.menu-line
 		.white-block
 		.container
 			.navigation-wrap
 				menu.main-menu
-					-for (var i = 0; i < menu.length; i++)
-						li.main-menu__li
-							a(href='#' alt='#{menu[i]}') #{menu[i]}
+					li.main-menu__li
+						a(href='#' alt='Главная') Главная
+					li.main-menu__li
+						a(href='#' alt='Новости') Новости
+					li.main-menu__li
+						a(href='#' alt='Публикации') Публикации
+					li.main-menu__li
+						a(href='company.html' alt='О компании') О компании
+					li.main-menu__li
+						a(href='#' alt='Контакты') Контакты
 				form.search
 					input.search_input(name='search_query' type="text")
 					button.search_subm(type='submit')
