@@ -1,5 +1,248 @@
 .services{
-	&__title-wrap{
-		
+	&-tringle{
+		&-wrap{
+			display: none;
+			min-height: 210px;
+			margin-bottom: 30px;
+			max-width: 590px;
+			padding: 20px 25px;
+			position: relative;
+			background: #f9f9fa;
+			&:before{
+				content: '';
+				position: absolute;
+				width: 0;
+				height: 0;
+				top: 80px;
+				left: -30px;
+				border-style: solid;
+				border-width: 25px 30px 25px 0;
+				border-color: transparent #f9f9fa transparent transparent;
+			}
+		}
+		&__item{
+			@include font-size(12px);
+			margin-bottom: 15px;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+	&__content-wrap{
+		@include clearfix();
+		margin-bottom: 50px;
+	}
+	&-side{
+		&-left{
+			float: left;
+			width: 27%;
+			margin-right: 40px;
+		}
+		&-right{
+			float: left;
+			width: 63%;
+			@include clearfix();
+			.img{
+				width: 260px;
+				height: 340px;
+				border: 5px dotted #000;
+				margin-right: 25px;
+				float: left;
+			}
+			.h2{
+				margin-bottom: 15px;
+			}
+		}
+	}
+	&__dscr{
+		float: left;
+		width: 60%;
+		p{
+			line-height: 20px;
+			text-align: justify;
+			text-indent: 40px;
+		}
+	}
+	&__item{
+		margin-top: 20px;
+		&:first-child{
+			margin-top: 0;
+		}
+	}
+	&__link{
+		&:hover{
+			text-decoration: underline;
+		}
+		&_active{
+			font-weight: 600;
+		}
+	}
+	&__prices{
+		&-wrap{
+			@include clearfix();
+			clear: both;
+			display: -webkit-box;
+			display: -moz-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;  
+			align-items: stretch;
+			margin-bottom: 35px;
+		}
+		&-item{
+			position: relative;
+			padding-bottom: 150px;
+			text-align: center;
+			background: #f9f9fa;
+			border-right: 1px solid #e6e7e9;
+			@include transition(.5s);
+			&:hover{
+				.services__prices-title{
+					@include transition(.5s);
+					background-image: linear-gradient(-90deg,#6beea7,#57e09f 46%,#43d297);
+					color: #434a54;
+
+				}
+				background: #fff;
+			}
+		}
+		&-title{
+		    font-family: 'ubuntubold';
+		    @include font-size(16px);
+		    color: $green-header;
+		    background: #e9fcf2;
+		    padding: 25px 0;
+		}
+	}
+	&-items{
+		&__list{
+			padding: 0 10px;
+		}
+		&__item{
+			padding-top: 20px;
+			display: block;
+			@include font-size(12px);
+		}
+	}
+	&__btn-wrap{
+		border-top: 1px solid #e6e7e9;
+		position: absolute;
+		bottom: 0;
+	    padding: 20px 30px;
+	    width: 100%;
+		.price-wrap{
+			margin-bottom: 18px;
+			.item_price, 
+			.h2{
+				color: #cc2226;
+				font-family: 'ubuntubold';
+				display: inline-block;
+			}
+			.item_price{
+				@include font-size(16px);
+			}
+			.h2{
+				position: relative;
+				&:after{
+					content: '\20BD';
+					font-family: sans-serif;
+					margin-left: -2px;
+				}
+			}
+		}
+		.btn_price{
+			color: #fff;
+			font-family: 'ubuntubold';
+			padding: 9px 15px;
+			display: inline-block;
+			border-radius: 5px;
+			background: #fa2a15; /* Old browsers */
+			background: -moz-linear-gradient(top, #fa2a15 0%, #ff0a21 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(top, #fa2a15 0%,#ff0a21 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to bottom, #fa2a15 0%,#ff0a21 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fa2a15', endColorstr='#ff0a21',GradientType=0 ); /* IE6-9 */
+			&:hover{
+				background: #9C2A1F; /* Old browsers */
+				background: -moz-linear-gradient(top, #9C2A1F 0%, #ff0a21 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(top, #9C2A1F 0%,#ff0a21 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to bottom, #9C2A1F 0%,#ff0a21 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9C2A1F', endColorstr='#ff0a21',GradientType=0 ); /* IE6-9 */
+			}
+		}
+	}
+	&__stars-wrap{
+		.stars-item{
+			text-indent: 15px;
+			position: relative;
+			text-align: justify;
+			margin-bottom: 15px;
+			&:last-child{
+				margin-bottom: 65px;
+			}
+			&:nth-child(1){
+				&:before{
+					content: '*';
+					position: absolute;
+					margin-left: -27px;
+				}
+			}
+			&:nth-child(2){
+				&:before{
+					content: '**';
+					position: absolute;
+					margin-left: -31px;
+				}
+			}
+		}
+	}
+}
+.more{
+	&__ques{
+		&-wrap{
+			height: 190px;
+			background: #53b593;
+			.container{
+				@include clearfix();
+			}
+		}
+		&-title{
+			float: left;
+			position: relative;
+			bottom: 50%;
+			transform: translateY(50%);
+			.h1{
+				margin-bottom: 0;
+				color: #fff;
+			}
+			.span{
+				@extend .h2;
+				font-family: 'ubuntulight';
+				color: #fff;
+			}
+		}
+		&-btn{
+			float: right;
+			position: relative;
+			bottom: 100%;
+			transform: translateY(100%);
+			.ques-btn{
+				@extend .h2;
+				display: block;
+				background: #ffffff; /* Old browsers */
+				background: -moz-linear-gradient(top, #ffffff 0%, #e7f4f4 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(top, #ffffff 0%,#e7f4f4 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to bottom, #ffffff 0%,#e7f4f4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e7f4f4',GradientType=0 ); /* IE6-9 */
+				padding: 20px 30px;
+				@include transition(.5s);
+				border-radius: 4px;
+				&:hover{
+					background: #858990; /* Old browsers */
+					background: -moz-linear-gradient(top, #858990 0%, #fff 100%); /* FF3.6-15 */
+					background: -webkit-linear-gradient(top, #858990 0%,#fff 100%); /* Chrome10-25,Safari5.1-6 */
+					background: linear-gradient(to bottom, #858990 0%,#fff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				}
+			}
+		}
 	}
 }

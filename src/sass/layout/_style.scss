@@ -48,7 +48,7 @@
 	box-sizing: border-box;
 }
 body{
-    font-family: 'ubuntulight';
+	font-family: 'ubuntulight';
 	@include font-size(14px);
 }
 .wrapper{
@@ -84,4 +84,65 @@ body{
 	padding: 0 30px;
 }
 
+// Стили кнопок - главная тема
+// только стили без padding/margin/display
 
+// Зеленые - градиент
+.button-mth_green{
+	@include border-radius(4px);
+	@include transition(0.25s);
+	background-image: -moz-linear-gradient( -180deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
+	background-image: -webkit-linear-gradient( -180deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
+	background-image: -ms-linear-gradient( -180deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
+	background-image: linear-gradient( -180deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
+	&:hover{
+		background-image: -moz-linear-gradient( 180deg, rgb(67,210,151) 0%, rgb(87,224,159) 54%, rgb(107,238,167) 100%);
+		background-image: -webkit-linear-gradient( 180deg, rgb(67,210,151) 0%, rgb(87,224,159) 54%, rgb(107,238,167) 100%);
+		background-image: -ms-linear-gradient( 180deg, rgb(67,210,151) 0%, rgb(87,224,159) 54%, rgb(107,238,167) 100%);
+		background-image: linear-gradient( 180deg, rgb(67,210,151) 0%, rgb(87,224,159) 54%, rgb(107,238,167) 100%);
+	}
+}
+// Темно зеленые - с обводкой
+.button-mth_dbgreen{
+	@include border-radius(4px);
+	@include transition(0.25s);
+	color: $gren-darker;
+	border: 2px solid $gren-darker;
+	&:hover{
+		background: $gren-darker;
+		color: white;
+	}
+}
+// Небесного цвета - градиент
+.button-mth_skyblue{
+	@include border-radius(4px);
+	@include transition(0.25s);
+	background-image: -moz-linear-gradient( 0deg, rgb(231,244,243) 0%, rgb(243,250,249) 54%, rgb(255,255,255) 100%);
+	background-image: -webkit-linear-gradient( 0deg, rgb(231,244,243) 0%, rgb(243,250,249) 54%, rgb(255,255,255) 100%);
+	background-image: -ms-linear-gradient( 0deg, rgb(231,244,243) 0%, rgb(243,250,249) 54%, rgb(255,255,255) 100%);
+	background-image: linear-gradient( 0deg, rgb(231,244,243) 0%, rgb(243,250,249) 54%, rgb(255,255,255) 100%);
+	color: $dark;
+	&:hover{
+		background-image: -moz-linear-gradient( 180deg, rgb(231,244,243) 0%, rgb(243,250,249) 54%, rgb(255,255,255) 100%);
+		background-image: -webkit-linear-gradient(180deg, rgb(231,244,243) 0%, rgb(243,250,249) 54%, rgb(255,255,255) 100%);
+		background-image: -ms-linear-gradient( 180deg, rgb(231,244,243) 0%, rgb(243,250,249) 54%, rgb(255,255,255) 100%);
+		background-image: linear-gradient( 180deg, rgb(231,244,243) 0%, rgb(243,250,249) 54%, rgb(255,255,255) 100%);
+	}
+}
+
+// Красная - градиент
+.button-mth_red{
+	@include border-radius(4px);
+	@include transition(0.25s);
+	color: white;
+	background-image: -moz-linear-gradient( -180deg, rgb(250,42,21) 0%, rgb(253,26,27) 46%, rgb(255,10,33) 100%);
+	background-image: -webkit-linear-gradient( -180deg, rgb(250,42,21) 0%, rgb(253,26,27) 46%, rgb(255,10,33) 100%);
+	background-image: -ms-linear-gradient( -180deg, rgb(250,42,21) 0%, rgb(253,26,27) 46%, rgb(255,10,33) 100%);
+	background-image: linear-gradient( -180deg, rgb(250,42,21) 0%, rgb(253,26,27) 46%, rgb(255,10,33) 100%);
+	&:hover{
+		background-image: -moz-linear-gradient( 180deg, rgb(225,0,21) 0%, rgb(238,21,21) 54%, rgb(250,42,21) 100%);
+		background-image: -webkit-linear-gradient( 180deg, rgb(225,0,21) 0%, rgb(238,21,21) 54%, rgb(250,42,21) 100%);
+		background-image: -ms-linear-gradient( 180deg, rgb(225,0,21) 0%, rgb(238,21,21) 54%, rgb(250,42,21) 100%);
+		background-image: linear-gradient( 180deg, rgb(225,0,21) 0%, rgb(238,21,21) 54%, rgb(250,42,21) 100%);
+	}
+}
