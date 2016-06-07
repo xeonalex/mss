@@ -1,0 +1,41 @@
+.news__title_partners{
+	@include clearfix();
+}
+.partners-logo{
+	float: left;
+}
+.partners-title{
+	margin-top: 70px;
+	margin-left: 300px;
+}
+.partners-single__descr {
+	text-align: justify;
+	margin-bottom: 25px;
+}
+.partners-ul-title{
+	margin-bottom: 25px;
+}
+.partners__list{
+	padding-left: 20px;
+	margin-bottom: 50px;
+	max-width: 880px;
+}
+.partners__item{
+	position: relative;
+	display: list-item;
+	margin-bottom: 5px;
+}
+// Маркеры через :before
+// .partners__item:before{
+// 	content: "";
+// 	position: absolute;
+// 	background: url(../img/bull.png);
+// 	width: 7px;
+// 	height: 7px;
+//     left: -15px;
+//     top: 5px;
+// }
+.reviews-single{
+	background: rgba(249, 249, 250, 0.8);
+	min-height: 200px;
+}
