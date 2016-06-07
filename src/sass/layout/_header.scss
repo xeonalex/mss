@@ -2,6 +2,8 @@
 	background: #fff;
 	border-bottom: 1px solid #eaeced;
 	padding-bottom: 20px;
+	@include box-shadow(0 3px 23px .12px hsla(0, 4%, 15%, 0.2));
+	position: relative;
 }
 
 .menu-line {

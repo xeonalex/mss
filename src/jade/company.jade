@@ -33,9 +33,9 @@ block main
 		.accred
 			.container
 				.accred-sertif
-					.sertif-wrap
+					a.sertif-wrap(href='img/content/accred1.jpg' data-lightbox="accred-gallery").light-b__init
 						img(src='img/content/accred1.jpg')
-					.sertif-wrap
+					a.sertif-wrap(href='img/content/accred2.jpg' data-lightbox="accred-gallery").light-b__init
 						img(src='img/content/accred2.jpg')
 				.accred-text-wrap
 					p
@@ -173,4 +173,106 @@ block main
 								img(src="img/icons/slide-item.png", alt="")
 							.img-item
 								img(src="img/icons/slide-item.png", alt="")
+	.vacancy-block-wrap
+		.container-inner
+			.vacancy__title
+				h1.h1-und#certif
+					| Вакансии
+			.vacancy
+					ul.vacancy__list.accordeon
+						-for (var j=1;j<=3;j++)
+							li.vacancy-wrap.accordeon__li
+								.init-vacancy-accord.accordeon-init
+									| Название вакансии
+								.vacancy-accord-content.accordeon-content
+									p
+										strong
+											| Ключевая обязанность: организация системного
+											| SMM-сопровождения деятельности группы компаний
+											| Юлмарт в социальных сетях.
+									p
+										strong
+											| Задачи:
+									ul
+										li Разработка и реализация стратегии присутствия бренда Юлмарта в социальных сетях, блогах, форумах, основанная на общей маркетинговой стратегии компании: определение целей и ключевых показателей эффективности, оценка результатов, контроль бюджета
+										li Ведение существующих групп Юлмарта в соц.сетях
+										li Мониторинг целевых и конкурентных групп, поиск площадок с высокой концентрацией целевой аудитории, интеграция
+										li Координация работы SMM-агентства: привлечение и увеличение подписчиков, поддержание пользовательской активности в группах, работа с мнениями, нейтрализация негативных пользователей/работа с негативом
+										li Организация поддерживающих медиа-кампаний в рамках маркетинговых акций: медиа-планирование, бюджетирование, запуск, сопровождение, отчетность
+										li Разработка, организация и проведение конкурсов, акций и внедрение новых интерактивных инструментов и механик
+										li Определение ключевых показателей эффективности, анализ реализованных проектов, формирование ежемесячной отчетности по результатам деятельности
+										li Взаимодействие и координация подрядчиков, ведение документооборота, бюджетирование SMM-проектов
+									.buttons-block
+										a(href='#').close-accord.accordeon-close.button-mth_dbgreen
+											| Скрыть
+										a(href='#').respond-to-job.button-mth_red
+											| Отклик
+	.requisites-block-wrap
+		.container-inner
+			.requisites__title
+				h1.h1-und#certif
+					| Реквизиты
+			.requisites
+				ul.requisites-text-block
+					li.requisites-text-block__item
+						p.item
+							| Наименование компании:
+						p.defination
+							| Общество с ограниченной ответственностью «Стандарт качества»
+					li.requisites-text-block__item
+						p.item
+							| Руководитель:
+						p.defination
+							| Генеральный директор Ключев А.А.
+					li.requisites-text-block__item
+						p.item
+							| Юридический адрес:
+						p.defination
+							| 192029, Санкт-Петербург, пр. Обуховской Обороны, д. 86, лит.К, пом. 2Н.
+					li.requisites-text-block__item
+						p.item
+							| Фактический адрес:
+						p.defination
+							| 192029, Санкт-Петербург, пр. Обуховской Обороны, д. 86, лит.К, пом. 2Н.
+				ul.requisites-text-block.right
+					li.requisites-text-block__item
+						span.item
+							| ИНН:
+						span.defination
+							| 7811586685
+					li.requisites-text-block__item
+						span.item
+							| ОГРН:
+						span.defination
+							| 1147847274002
+						p
+							span.defination
+								| Дата присвоения ОГРН:
+							span.defination
+								| 05.08.2014
+					li.requisites-text-block__item
+						span.item
+							| КПП:
+						span.defination
+							| 781101001
+					li.requisites-text-block__item
+						span.item
+							| Р/cчет:
+						span.defination
+							| 40702810861160000156
+					li.requisites-text-block__item
+						span.item
+							| К/счет:
+						span.defination
+							| 30101810840300000916
+					li.requisites-text-block__item
+						span.item
+							| БИК:
+						span.defination
+							| 044030916
+					li.requisites-text-block__item
+						span.item
+							| Наименование банка:
+						span.defination
+							| Филиал "Санкт-Петербургский" ОАО "УБРиР"
 
