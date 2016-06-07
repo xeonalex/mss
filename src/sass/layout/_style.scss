@@ -13,6 +13,7 @@
     display: inline-block;
     position: relative;
     margin-bottom: 55px;
+    color: $dark;
     &:after{
 		content: '';
 		position: absolute;
@@ -50,6 +51,7 @@
 body{
 	font-family: 'ubuntulight';
 	@include font-size(14px);
+	color: $dark;
 }
 .wrapper{
 	min-width: 1200px;
@@ -85,12 +87,13 @@ body{
 }
 
 // Стили кнопок - главная тема
-// только стили без padding/margin/display
+// только стили без padding/margin/display/font-family
 
 // Зеленые - градиент
 .button-mth_green{
 	@include border-radius(4px);
 	@include transition(0.25s);
+	color: $gren-darker;
 	background-image: -moz-linear-gradient( -180deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
 	background-image: -webkit-linear-gradient( -180deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
 	background-image: -ms-linear-gradient( -180deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
@@ -144,5 +147,55 @@ body{
 		background-image: -webkit-linear-gradient( 180deg, rgb(225,0,21) 0%, rgb(238,21,21) 54%, rgb(250,42,21) 100%);
 		background-image: -ms-linear-gradient( 180deg, rgb(225,0,21) 0%, rgb(238,21,21) 54%, rgb(250,42,21) 100%);
 		background-image: linear-gradient( 180deg, rgb(225,0,21) 0%, rgb(238,21,21) 54%, rgb(250,42,21) 100%);
+	}
+}
+
+
+// Стили ссылок главная тема
+.podrobn-link{
+	line-height: 20px;
+
+	span {
+	    vertical-align: middle;
+	    line-height: 20px;
+	}
+	&:after{
+		margin-left: 5px;
+		display: inline-block;
+	    vertical-align: middle;
+		width: 16px;
+		height: 16px;
+		content: '';
+		background: url('../img/icons/arrow-border.png') no-repeat;
+	}
+	&:hover{
+		&:after{
+			background: url('../img/icons/arrow-border-h.png') no-repeat;
+		}
+		text-decoration: underline;
+	}
+}
+
+.podrobn-link_pre{
+	line-height: 20px;
+	span {
+	    vertical-align: middle;
+	    line-height: 20px;
+	}
+	&:before{
+		margin-right: 5px;
+	    vertical-align: middle;
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		content: '';
+		background: url('../img/icons/arrow-border.png') no-repeat;
+		@include rotate(180);
+	}
+	&:hover{
+		&:before{
+			background: url('../img/icons/arrow-border-h.png') no-repeat;
+		}
+		text-decoration: underline;
 	}
 }
