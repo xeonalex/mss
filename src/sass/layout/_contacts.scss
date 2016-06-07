@@ -1,0 +1,149 @@
+.contacts__adress-map{
+	@include clearfix();
+}
+.contacts__map{
+	float: right;
+	height: 570px;
+	width: 780px;
+}
+.contacts__adress{
+	padding-left: 80px;
+	float: left;
+	width: 350px;
+	height: 100%;
+	margin-top: 125px;
+	@include font-size(24px);
+}
+.contacts__item{
+	margin-bottom: 50px;
+}
+.adress__wrap{
+	position: relative;
+}
+.adress__wrap:before{
+	content: "";
+	position: absolute;
+	height: 52px;
+	width: 31px;
+	background: url('../img/icons/addr.svg');
+	background-size: cover;
+	left:-60px;
+}
+.phone{
+	position: relative;
+	margin-bottom: 65px;
+}
+.phone:before{
+	content: "";
+	position: absolute;
+	height: 62px;
+	width: 45px;
+	background: url('../img/icons/phone.svg');
+	background-size: cover;
+	left:-60px;
+	top:-25px;
+}
+.mail{
+	position: relative;
+}
+.mail:before{
+	content: "";
+	position: absolute;
+	height: 40px;
+	width: 57px;
+	background: url('../img/icons/letter.svg');
+	background-size: cover;
+	left:-80px;
+	top:-15px;
+
+}
+.adress__title{
+	margin-bottom: 15px;
+}
+.adress__descr{
+	@include font-size(14px);
+}
+#map_canvas{
+	width: 100%;
+	height: 100%;
+}
+.contacts__adress-map{
+	margin-bottom: 65px;
+}
+.wrap-to-clearfix{
+	@include clearfix();
+}
+
+.form__title{
+	text-align: center;
+	margin-bottom: 55px;
+}
+.item-input{
+	position: relative;
+	display: inline-block;
+	margin-bottom: 50px;
+
+	.contacts-form__input{
+		color: $gray;
+		padding:10px;
+		width: 375px;
+		height: 57px;
+		padding-left: 20px;
+		@include border-radius(3px);
+		border:1px solid $lightgray;
+		&:focus{
+			outline: 1px solid $dark;
+		}
+		&:focus+.contacts-form__label-form{
+			top:-50px;
+		}
+	}
+	.textarea:focus+.contacts-form__label-form{
+		top:-50px;
+	}
+	.contacts-form__label-form{
+		z-index: -2;
+		transition: .5s;
+		position: absolute;
+		top:0;
+		left:0;
+		padding-top:20px;
+		padding-left: 20px;
+	}
+}
+.form__inputs{
+	text-align: right;
+	width: 50%;
+	float: left;
+	padding: 0 25px;
+}
+.form__textarea{
+	text-align: left;
+	width: 50%;
+	float: right;
+	padding: 0 25px;
+}
+.textarea{
+	display: inline-block;
+	width: 375px;
+	height: 271px;
+	@include border-radius(3px);
+	border:1px solid $lightgray;
+	resize:none;
+	padding-left: 20px;
+	padding-top: 20px;
+	font-family: 'ubuntulight';
+		&:focus{
+			outline: 1px solid $dark;
+		}
+}
+.button__wrap{
+}
+.google-captcha,
+.button-group{
+}
+.google-captcha{
+	background: $gray;
+	width: 300px;
+	height: 75px;
+}

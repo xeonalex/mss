@@ -8,17 +8,45 @@ block main
 						a.breadcrumbs__link(href="#") Главная
 					li.breadcrumbs__item
 						a.breadcrumbs__link.breadcrumbs__link_active(href="#") Контакты
-			.contacts__wrap
-				.contacts__title
-					h1.h1 Контакты
-				.contacts__adress-map
-					.adress__wrap
+			.contacts__title
+				h1.h1 Контакты
+			.contacts__adress-map
+				.contacts__adress
+					.adress__wrap.contacts__item
 						.adress__title Адрес
 						.adress__descr 192029, Санкт-Петербург, пр. Обуховской Обороны, д. 86, лит.К, пом. 2Н
-					.phone
+					.phone.contacts__item
 						a(href="tel:8 (812) 920 59 90") 8 (812) 920 59 90  
-					.mail
+					.mail.contacts__item
 						a(href="mailto:mss-standart@mail.ru") mss-standart@mail.ru
-				.contacts__form
-					.form__title
-						h2.h2 Остались вопросы ?		ё
+				.contacts__map
+					#map_canvas
+			.contacts__form
+				.form__title
+					h2.h2 Остались вопросы ?
+				form(action="#").contacts-form__wrap
+					.wrap-to-clearfix
+						.form__inputs
+							.item-input
+								input(id='name' type='text' placeholder='Введите имя' ).contacts-form__input
+								label(for='name').contacts-form__label-form
+									span Введите имя
+							.item-input
+								input(id='phone' type='text' placeholder='Введите телефон' ).contacts-form__input
+								label(for='phone').contacts-form__label-form
+									span Введите телефон
+							.item-input
+								input(id='mail' type='text' placeholder='Введите Email').contacts-form__input
+								label(for='mail').contacts-form__label-form
+									span Введите Email
+						.form__textarea
+							.item-input
+								textarea.textarea(id="text" placeholder='Текст сообщения')
+								label(for='text').contacts-form__label-form
+									span Текст сообщения
+					.button__wrap
+						.google-captcha
+						.button-group
+							a(href="#").button-mth_dbgreen Очистить
+							a(href="#").button-mth_green Отправить
+							
