@@ -36,7 +36,7 @@ block main
 								label(for='phone').contacts-form__label-form
 									span Введите телефон
 							.item-input
-								input(id='mail' type='text' placeholder='Введите Email').contacts-form__input
+								input(id='mail' type='email' placeholder='Введите Email').contacts-form__input
 								label(for='mail').contacts-form__label-form
 									span Введите Email
 						.form__textarea
@@ -45,8 +45,8 @@ block main
 								label(for='text').contacts-form__label-form
 									span Текст сообщения
 					.button__wrap
-						.google-captcha
+						.google-captcha ГУГЛ КАПЧА
 						.button-group
-							a(href="#").button-mth_dbgreen Очистить
-							a(href="#").button-mth_green Отправить
+							button(type='reset').button-mth_dbgreen  Очистить
+							button(type='submit').button-mth_green Отправить
 							

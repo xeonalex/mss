@@ -56,11 +56,11 @@ function initialize() {
     // задаем параметры карты
     var mapOptions = {
         //Это центр куда спозиционируется наша карта при загрузке
-        center: new google.maps.LatLng(59.8937928, 30.2673562),
+        center: new google.maps.LatLng(59.8940615, 30.4380672),
         //увеличение под которым будет карта, от 0 до 18
         // 0 - минимальное увеличение - карта мира
         // 18 - максимально детальный масштаб
-        zoom: 16,
+        zoom: 14,
         //Тип карты - обычная дорожная карта
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
@@ -71,7 +71,7 @@ function initialize() {
     var markers = [],
         myPlaces = [];
     //Добавляем места в массив
-    myPlaces.push(new Place('Кировский район, ул. Оборонная, д.10', 59.8937928, 30.2673562, 'Санкт-Петербург'));
+    myPlaces.push(new Place(' пр. Обуховской Обороны, д. 86, лит.К, пом. 2Н', 59.8940615, 30.4380672, 'Санкт-Петербург'));
     //Теперь добавим маркеры для каждого места
     for (var i = 0, n = myPlaces.length; i < n; i++) {
         var marker = new google.maps.Marker({
@@ -116,3 +116,52 @@ google.maps.event.addDomListener(window, 'load', initialize);
    $(this).attr('placeholder',$(this).data('placeholder'));
  });
  });
+ // Валидация
+  
+   var $forms = $('.contacts-form__wrap');
+       $forms.on('submit', _validate);
+       $forms.on('reset', _clear);
+    function _validate(e) {
+        e.preventDefault();
+        var
+            $this = $(this),
+            $inputs = $this.find('.contacts-form__input'),
+            valid = true;
+
+        $inputs.each(function () {
+            var
+                $this = $(this),
+                $group = $this.closest('.item-input'),
+                value = $this.val();
+
+            if (
+                (value && $this.attr('type') !== 'email') ||
+                (
+                    $this.attr('type') === 'email' &&
+                    /^[-._a-z0-9]+@(?:[a-z0-9][-a-z0-9]+\.)+[a-z]{2,6}$/.test($this.val())
+                )
+            ) {
+                $group.addClass('form__group_valid');
+            } else {
+                valid = false;
+                $group.addClass('form__group_no-valid');
+                $this.attr('placeholder', $this.data('value'));
+            }
+
+            $this.on('input', function () {
+                $group.removeClass('form__group_no-valid');
+            });
+        });
+
+        if(valid){
+            $this[0].submit();
+        }
+    }
+
+    function _clear(){
+        $(this)
+            .find('.item-input')
+            .removeClass('form__group_valid form__group_no-valid')
+            .end()
+            .find('.contacts-form__input')
+    }
