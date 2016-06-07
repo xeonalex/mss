@@ -1,10 +1,141 @@
 .promezhutuslugi__content-wrap{
 	@include clearfix();
+	margin-bottom: 90px;
 }
 .promezhutuslugi__left-block{
 	float:left;
+	width: 370px;
+	margin-right: 75px;
+	padding: 40px 20px;
+	border: 1px solid $lightgray;
+	@include border-radius(3px);
+	position: relative;
+}
+.promezhutuslugi__left-block:before{
+	content: "";
+	position: absolute;
+    top: 22%;
+	right:-17px;
+	width: 18px;
+	height: 123px;
+	background: url(../img/icons/before-menu.png);
+	background-size: cover;	
+}
+.promezhutuslugi__left-block:after{
+	content: "";
+	position: absolute;
+	width: 8px;
+	height: 11px;
+	background: url(../img/icons/after-menu.png);
+	background-size: cover;
+    top: 30.5%;
+    right: -12px;
+}
+.promezhutuslugi__left-block:hover:after,
+.promezhutuslugi__left-block:hover:before{
+	cursor: pointer;
+}
+.menu-promezhutuslugi{
+	&__list{
+
+	}
+	&__item{
+		margin-bottom: 30px;
+	}
+	&__item:last-child{
+		margin-bottom: 0;
+	}
+	&__link{
+
+	}
+	&__link:hover{
+		text-decoration: underline;
+	}
+	&__link_active{
+		font-weight: 600;
+	}
 }
 .promezhutuslugi__right-block{
 	float:left;
 	width: 680px;
+	background: #f9f9fa;
+	padding: 20px;
+	@include font-size(12px);
+	@include clearfix();
+	@include border-radius(3px);
+	position: relative;
 }
+.promezhutuslugi__right-block:after, .promezhutuslugi__right-block:before {
+	right: 100%;
+	top: 50px;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.promezhutuslugi__right-block:after {
+	border-right-color: #f9f9fa;
+	border-width: 30px;
+	margin-top: -30px;
+}
+.promezhutuslugi__right-block:before {
+	border-right-color: #f9f9fa;
+	border-width: 31px;
+	margin-top: -31px;
+}
+
+.uslugi{
+	&__list{
+
+	}
+	&__item{
+		margin-bottom: 20px;
+	}
+	&__item:last-child{
+		margin-bottom: 0;
+	}
+	&__link{
+
+	}
+	&__link:hover{
+		text-decoration: underline;
+	}
+}
+.poduslugi{
+	&__list{
+		padding-left: 20px;
+		margin-top: 18px;
+
+	}
+	&__item{
+		margin-bottom: 18px;
+	}
+	&__link{
+		
+	}
+	&__link:hover{
+		text-decoration: underline;
+	}
+}
+// Клас для отображения в одну колонку
+.single-block{
+	width: 100%;
+}
+// Клас для отображения в две колонки
+// Первая колонка - .first-block, вторая - .second-block
+.duoble-block{
+	@include clearfix();	
+}
+	.first-block{
+		width: 48%;
+		float:left;
+	}
+	.second-block{
+		width: 48%;
+		float: right;
+		border-left: 2px solid $lightgray;
+		padding-left: 20px;
+	}
