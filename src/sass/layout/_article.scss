@@ -1,0 +1,128 @@
+.article{
+	p{
+		text-indent: 30px;
+		line-height: 20px;
+	}
+	.container-inner{
+		@include clearfix();
+		outline: 1px solid red;
+	}
+	&__banner-wrap{
+		min-height: 420px;
+		border: 5px solid dotted #000;
+		margin-bottom: 70px;
+	}
+	&__content-wrap{
+		clear: both;
+		&:last-child{
+			margin-bottom: 70px;
+		}
+		.h2{
+			margin-bottom: 20px;
+		}
+		p{
+			&:first-child{
+				@include font-size(16px);
+				margin-bottom: 25px;
+				line-height: 23px;
+			}
+			&:last-child{
+				margin-bottom: 50px;
+			}
+		}
+	}
+	&__gallery{
+		&-wrap{
+			float: left;
+			width: 500px;
+			height: 390px;
+			margin: 0 0 80px -125px;
+			.owl-dots{
+				margin-top: 20px;
+				text-align: center !important;
+			}
+			.owl-dot{
+				width: 44px;
+				height: 8px;
+				background: #bef8d8;
+				display: inline-block;
+				margin-right: 22px;
+				border-radius: 3px;
+			}
+			.owl-dot.active{
+				background: #6beea7;
+			}
+		}
+		&-item{
+			border: 5px solid dotted #000;
+			width: 500px;
+			height: 390px;
+		}
+		&-dscr{
+			width: 58%;	
+			float: right;
+		}
+	}
+	&__social-wrap{
+		margin-bottom: 85px;
+		.socail-date{
+			@extend .h3;
+			display: block;
+			margin-bottom: 15px;
+			font-weight: 600;
+			color: #434a54;
+		}
+	}
+	.more__ques-wrap{
+		// margin-bottom: 45px;
+	}
+	&__links-wrap{
+		background-color: #e9fcf2;
+		height: 40px;
+		line-height: 40px;
+		margin-bottom: 55px;
+		@include opacity(.6);
+		.container{
+			@include clearfix();
+		}
+		.arc{
+			&-prev-link{
+				float: left;
+			}
+			&-next-link{
+				float: right;
+			}
+		}
+	}
+	&__arcs{
+		&-wrap{
+			width: 100%;
+			text-align: justify;
+			margin-bottom: 35px;
+			&:last-child:after{
+				content: '';
+				width: 100%;
+				display: inline-block;
+			}
+		}
+		&-item{
+			display: inline-block;
+			position: relative;
+			width: 30%; // ширина обязательна;
+			text-align: left;
+			span{
+				display: block;
+			}
+			.arcs-date{
+				margin-bottom: 14px;
+			}
+			.arcs-title{
+				@extend .h4;
+				margin-bottom: 25px;
+			}
+			.arcs-txt{
+				text-indent: 0;
+			}
+		}
+	}
+}
