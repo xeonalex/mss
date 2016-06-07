@@ -39,3 +39,26 @@
 	background: rgba(249, 249, 250, 0.8);
 	min-height: 200px;
 }
+.reviews-single{
+	.feedback-wrap {
+		margin-bottom: 85px;
+	}
+	.reviews-single__title{
+		margin: 70px 0 50px 0;
+	}
+}
+.reviews-single__nav-line{
+	overflow: hidden;
+	height: 40px;
+	background: rgba(233,252,243,.7);
+	.container {
+		padding: 10px 15px;
+		@include clearfix;
+	}
+	.podrobn-link_pre{
+		float: left;
+	}
+	.podrobn-link{
+		float: right;
+	}
+}
