@@ -5,7 +5,6 @@
 	}
 	.container-inner{
 		@include clearfix();
-		outline: 1px solid red;
 	}
 	&__banner-wrap{
 		min-height: 420px;
@@ -73,9 +72,6 @@
 			color: #434a54;
 		}
 	}
-	.more__ques-wrap{
-		// margin-bottom: 45px;
-	}
 	&__links-wrap{
 		background-color: #e9fcf2;
 		height: 40px;
@@ -84,6 +80,9 @@
 		@include opacity(.6);
 		.container{
 			@include clearfix();
+			> a{
+				line-height: 40px;
+			}
 		}
 		.arc{
 			&-prev-link{
@@ -108,7 +107,7 @@
 		&-item{
 			display: inline-block;
 			position: relative;
-			width: 30%; // ширина обязательна;
+			width: 30%;
 			text-align: left;
 			span{
 				display: block;
