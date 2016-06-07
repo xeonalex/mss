@@ -1,0 +1,10 @@
+.promezhutuslugi__content-wrap{
+	@include clearfix();
+}
+.promezhutuslugi__left-block{
+	float:left;
+}
+.promezhutuslugi__right-block{
+	float:left;
+	width: 680px;
+}
