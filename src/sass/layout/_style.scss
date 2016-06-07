@@ -51,6 +51,7 @@
 body{
 	font-family: 'ubuntulight';
 	@include font-size(14px);
+	color: $dark;
 }
 .wrapper{
 	min-width: 1200px;
