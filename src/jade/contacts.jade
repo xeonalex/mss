@@ -8,17 +8,24 @@ block main
 						a.breadcrumbs__link(href="#") Главная
 					li.breadcrumbs__item
 						a.breadcrumbs__link.breadcrumbs__link_active(href="#") Контакты
-			.contacts__wrap
-				.contacts__title
-					h1.h1 Контакты
-				.contacts__adress-map
-					.adress__wrap
+			.contacts__title
+				h1.h1 Контакты
+			.contacts__adress-map
+				.contacts__adress
+					.adress__wrap.contacts__item
 						.adress__title Адрес
 						.adress__descr 192029, Санкт-Петербург, пр. Обуховской Обороны, д. 86, лит.К, пом. 2Н
-					.phone
+					.phone.contacts__item
 						a(href="tel:8 (812) 920 59 90") 8 (812) 920 59 90  
-					.mail
+					.mail.contacts__item
 						a(href="mailto:mss-standart@mail.ru") mss-standart@mail.ru
-				.contacts__form
-					.form__title
-						h2.h2 Остались вопросы ?		ё
+				.contacts__map
+					#map_canvas
+			.contacts__form
+				.form__title
+					h2.h2 Остались вопросы ?
+				form(action="#").contacts-form__wrap
+					.item
+						input(id='var' type='text').contacts-form__input
+						label(for='var').contacts-form__label-form
+							span Ввойдите
