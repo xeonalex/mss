@@ -1,13 +1,15 @@
 .services{
 	&-tringle{
 		&-wrap{
-			display: none;
 			min-height: 210px;
 			margin-bottom: 30px;
 			max-width: 590px;
 			padding: 20px 25px;
 			position: relative;
 			background: #f9f9fa;
+			-webkit-box-shadow: 0 15px 20px -19px rgba(0,0,0,.5);
+			-moz-box-shadow: 0 15px 20px -19px rgba(0,0,0,.5);
+			box-shadow: 0 15px 20px -19px rgba(0,0,0,.5);
 			&:before{
 				content: '';
 				position: absolute;
@@ -19,6 +21,7 @@
 				border-width: 25px 30px 25px 0;
 				border-color: transparent #f9f9fa transparent transparent;
 			}
+
 		}
 		&__item{
 			@include font-size(12px);
@@ -37,6 +40,9 @@
 			float: left;
 			width: 27%;
 			margin-right: 40px;
+			.h2{
+				margin-bottom: 20px;
+			}
 		}
 		&-right{
 			float: left;
@@ -63,6 +69,11 @@
 			text-indent: 40px;
 		}
 	}
+	&__title-wrap{
+		.h1{
+			margin-bottom: 55px;
+		}
+	}
 	&__item{
 		margin-top: 20px;
 		&:first-child{
@@ -74,7 +85,7 @@
 			text-decoration: underline;
 		}
 		&_active{
-			font-weight: 600;
+			font-family: 'ubuntubold';
 		}
 	}
 	&__prices{
@@ -88,6 +99,9 @@
 			display: flex;  
 			align-items: stretch;
 			margin-bottom: 35px;
+			-webkit-box-shadow: 0 15px 20px -19px rgba(0,0,0,.5);
+			-moz-box-shadow: 0 15px 20px -19px rgba(0,0,0,.5);
+			 box-shadow: 0 15px 20px -19px rgba(0,0,0,.5);
 		}
 		&-item{
 			position: relative;
