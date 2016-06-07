@@ -21,11 +21,11 @@ block main
 			li.menu-line__li.menu-line_active
 				a(href='#feedbacks' alt='Отзывы') Отзывы
 			li.menu-line__li
-				a(href='#' alt='Партнеры') Партнеры
+				a(href='#partners' alt='Партнеры') Партнеры
 			li.menu-line__li
-				a(href='#' alt='Вакансии') Вакансии
+				a(href='#vacancies' alt='Вакансии') Вакансии
 			li.menu-line__li
-				a(href='#' alt='Реквизиты') Реквизиты
+				a(href='#recv' alt='Реквизиты') Реквизиты
 	.accred-wrap
 		.accred__title.container
 			h1.h1-und#accr
@@ -139,7 +139,7 @@ block main
 	.our-partners
 		.container
 			.partners__title
-				h1.h1-und
+				h1.h1-und#partners
 					| Наши партнеры
 			.gallery-wrap
 				.gallery-banners
@@ -176,15 +176,15 @@ block main
 	.vacancy-block-wrap
 		.container-inner
 			.vacancy__title
-				h1.h1-und#certif
+				h1.h1-und#vacancies
 					| Вакансии
 			.vacancy
-					ul.vacancy__list.accordeon
+					ul.accord-mth__list.accordeon
 						-for (var j=1;j<=3;j++)
-							li.vacancy-wrap.accordeon__li
-								.init-vacancy-accord.accordeon-init
+							li.accord-mth__item.accordeon__li
+								.accord-mth__init.accordeon-init
 									| Название вакансии
-								.vacancy-accord-content.accordeon-content
+								.accord-mth__content.accordeon-content
 									p
 										strong
 											| Ключевая обязанность: организация системного
@@ -210,7 +210,7 @@ block main
 	.requisites-block-wrap
 		.container-inner
 			.requisites__title
-				h1.h1-und#certif
+				h1.h1-und#recv
 					| Реквизиты
 			.requisites
 				ul.requisites-text-block

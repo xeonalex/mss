@@ -1,0 +1,117 @@
+.accordeon-init{
+	cursor: pointer;
+}
+.uslugi{
+	.container-inner{
+		padding: 0 0 70px 0 ;
+
+	}
+}
+
+.accord-mth__list_simple{
+	.accord-mth__item_simple{
+	}
+	.accord-mth__init_simple{
+		padding: 24px 0;
+		position: relative;
+		display: block;
+		font-size: 16px;
+	    font-family: 'ubuntumedium';
+	    color: $green-header;
+	    @include border-top-radius(4px);
+		&:after{
+			content: '';
+			position: absolute;
+			display: block;
+			width: 7px;
+			height: 13px;
+			right: 0;
+			top: 50%;
+			margin-top: -7px;
+			background: url(../img/icons/arrov_grey.png) no-repeat;
+			@include rotate(90);
+		}
+		&:hover{
+			color: $lightgreen;
+			&:after{
+			background: url(../img/icons/arrov_green.png) no-repeat;
+			}
+		}
+	}
+	.accord-mth__content_simple{
+		display: none;
+		background: #f9f9fa;
+		@include border-bottom-radius(4px)
+	    color: #434a54;
+	}
+	.accord-active{
+		.accord-mth__init_simple{
+			&:after{
+				@include rotate(-90);
+			}
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.uslugi-title{
+	text-align: center;
+}
+
+.sert-wrap{
+	padding-top: 35px;
+	padding-bottom: 35px;
+	display: table;
+	border-top: 1px solid #e6e7e9;
+	&:first-of-type{
+		padding-top: 0;
+		border-top: none;
+	}
+	.sert-descr-wrap{
+		display: table-cell;
+	}
+	.sert-details-wrap{
+		display: table-cell;
+		width: 175px;
+	}
+}
+
+.sert-descr-wrap{
+	.sert-title{
+	    font-family: 'ubuntumedium';
+	    font-size: 16px;
+	    margin-bottom: 20px;
+	}
+	.sert-descr{
+
+	}
+}
+.sert-details-wrap{
+	position: relative;
+	text-align: right;
+	.sert-price{
+		color: #cc2226;
+		font-size: 16px;
+	    font-family: 'ubuntubold';
+		.price{
+			font-size: 24px;
+			margin-left: 5px;
+			&:after{
+				display: inline-block;
+				margin-left: 4px;
+				content: 'P';
+				text-decoration: line-through;
+			}
+		}
+	}
+	.sert-details{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		font-family: 'ubuntubold';
+		font-weight: 600;
+		padding: 6px 14px;
+		display: block;
+	}
+}

@@ -1,0 +1,67 @@
+extends _layout.jade
+block main
+	.uslugi
+		.container
+			.breadcrumbs
+				ul.breadcrumbs__list
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Главная
+					li.breadcrumbs__item
+						a.breadcrumbs__link.breadcrumbs__link_active(href="#") Услуги
+			.section__title
+				h1.h1 Услуги
+			.container-inner
+				.uslugi-title
+					h2.h1-und Сертификация ISO
+				ul.accord-mth__list
+					-for (var j=1;j<=4;j++)
+						li.accord-mth__item.accordeon__li
+							.accord-mth__init.accordeon-init
+								| Сертификация систем менеджмента качества
+							.accord-mth__content.accordeon-content
+								-for (var k=1;k<=2;k++)
+									.sert-wrap
+										.sert-descr-wrap
+											.sert-title
+												| ГОСТ Р ИСО 14001 – 2007 (ISO 14001-2004) «Системы экологического менеджмента»
+											.sert-descr
+												| Задача организации, в особенности же консультация с широким активом способствует подготовки и реализации новых предложений. Не следует, однако забывать, что укрепление и развитие структуры требуют определения и уточнения модели развития. я.
+										.sert-details-wrap
+											.sert-price
+												| от
+												span.price 1000
+											a(href='#').sert-details.button-mth_dbgreen
+												| Подробнее
+				.uslugi-title
+					h2.h1-und Сертификация продукции
+				ul.accord-mth__list
+					-for (var j=1;j<=2;j++)
+						li.accord-mth__item.accordeon__li
+							.accord-mth__init.accordeon-init
+								| Сертификаты Евразийского союза (ТР ТС)
+							.accord-mth__content.accordeon-content
+								ul.accord-mth__list_simple
+									-for (var i=1;i<=2;i++)
+										li.accord-mth__item_simple.accordeon__li
+											.accord-mth__init_simple.accordeon-init
+												| ТР ТС для пищевой продукции
+											.accord-mth__content_simple.accordeon-content
+												-for (var k=1;k<=2;k++)
+													.sert-wrap
+														.sert-descr-wrap
+															.sert-title
+																| ТР ТС 021/2011 «О безопасности пищевой продукции»
+															.sert-descr
+																| Задача организации, в особенности же консультация с широким активом способствует подготовки и реализации новых предложений. Не следует, однако забывать, что укрепление и развитие структуры требуют определения и уточнения модели развития. я.
+														.sert-details-wrap
+															.sert-price
+																| от
+																span.price 1000
+															a(href='#').sert-details.button-mth_dbgreen
+																| Подробнее
+
+
+
+
+
+
