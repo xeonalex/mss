@@ -105,3 +105,14 @@ function Place(name, latitude, longitude, description){
 }
 //Когда документ загружен полностью - запускаем инициализацию карты.
 google.maps.event.addDomListener(window, 'load', initialize);
+// Убрать placeholder
+
+ $(document).ready(function () {
+ $('input,textarea').focus(function(){
+   $(this).data('placeholder',$(this).attr('placeholder'))
+   $(this).attr('placeholder','');
+ });
+ $('input,textarea').blur(function(){
+   $(this).attr('placeholder',$(this).data('placeholder'));
+ });
+ });
