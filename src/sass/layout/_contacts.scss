@@ -170,10 +170,10 @@
 color: $lightgreen;
 }
 .form__group_no-valid  input[placeholder] {
- ::-webkit-input-placeholder {color:$red;}
-::-moz-placeholder          {color:$red;}
-:-moz-placeholder           {color:$red;}
-:-ms-input-placeholder      {color:$red;}  
+ ::-webkit-input-placeholder {color:red;}
+::-moz-placeholder          {color:red;}
+:-moz-placeholder           {color:red;}
+:-ms-input-placeholder      {color:red;} 
 color:red;
 }
 .form__group_valid,
@@ -194,6 +194,7 @@ color:red;
 .form__group_valid:before {
 	content: "";
     display: block;
+    background-image: url(../img/icons/valid-ok.png);
     width: 25px;
     height: 25px;
     position: absolute;
