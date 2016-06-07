@@ -439,65 +439,84 @@
 	.vacancy{
 		margin-bottom: 70px;
 	}
-}
-.vacancy-wrap{
-	margin-bottom: 30px;
-}
-.init-vacancy-accord{
-	padding: 24px 30px;
-	position: relative;
-	display: block;
-	background: #f9f9fa;
-	font-size: 24px;
-    font-family: 'ubuntumedium';
-    color: #434a54;
-    @include border-top-radius(4px);
-	&:after{
-		content: '';
-		position: absolute;
-		display: block;
-		width: 7px;
-		height: 13px;
-		right: 45px;
-		top: 50%;
-		margin-top: -7px;
-		background: url(../img/icons/arrov_grey.png) no-repeat;
-		@include rotate(90);
+	.accord-mth__content{
+		p{
+			margin-bottom: 25px;
+		}
+		strong{
+		    font-family: 'ubuntubold';
+		}
+		ul {
+			list-style-type: disk;
+		}
+		li {
+			display: list-item;
+			margin-left: 20px;
+		}
+		ol{
+			list-style-type: decimal;
+		}
 	}
 }
+.accord-mth__list{
+	.accord-mth__item{
+		margin-bottom: 30px;
+	}
 
-.vacancy-accord-content{
-	display: none;
-	background: #f9f9fa;
-	padding: 30px;
-	box-shadow: 0 6px 5px -2px #cacccf;
-	@include border-bottom-radius(4px)
-    color: #434a54;
-	p{
-		margin-bottom: 25px;
-	}
-	strong{
-	    font-family: 'ubuntubold';
-	}
-	ul {
-		list-style-type: disk;
-	}
-	li {
-		display: list-item;
-		margin-left: 20px;
-	}
-	ol{
-		list-style-type: decimal;
-	}
-}
-.accord-active{
-	.init-vacancy-accord{
-		background-image: -moz-linear-gradient( 180deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
-		background-image: -webkit-linear-gradient( 180deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
-		background-image: -ms-linear-gradient( 180deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
-		background-image: linear-gradient( 180deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
+	.accord-mth__init{
+		padding: 24px 30px;
+		position: relative;
+		display: block;
+		background: #f9f9fa;
+		font-size: 24px;
+	    font-family: 'ubuntumedium';
+	    color: #434a54;
+	    @include border-top-radius(4px);
 		&:after{
-			@include rotate(-90);
+			content: '';
+			position: absolute;
+			display: block;
+			width: 7px;
+			height: 13px;
+			right: 30px;
+			top: 50%;
+			margin-top: -7px;
+			background: url(../img/icons/arrov_grey.png) no-repeat;
+			@include rotate(90);
+		}
+		&:hover{
+			color: $green-header;
+			&:after{
+			background: url(../img/icons/arrov_green.png) no-repeat;
+			}
+		}
+	}
+
+	.accord-mth__content{
+		display: none;
+		background: #f9f9fa;
+		padding: 30px;
+		box-shadow: 0 6px 5px -2px #cacccf;
+		@include border-bottom-radius(4px)
+	    color: #434a54;
+	}
+	.accord-active{
+		.accord-mth__init{
+			background-image: -moz-linear-gradient( 180deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
+			background-image: -webkit-linear-gradient( 180deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
+			background-image: -ms-linear-gradient( 180deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
+			background-image: linear-gradient( 180deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
+			&:after{
+				@include rotate(-90);
+			}
+			&:hover{
+				color: white;
+				background-image: -moz-linear-gradient( 0deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
+				background-image: -webkit-linear-gradient( 0deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
+				background-image: -ms-linear-gradient( 0deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
+				background-image: linear-gradient( 0deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
+			}
+
 		}
 	}
 }

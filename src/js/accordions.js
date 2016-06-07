@@ -12,13 +12,13 @@ var accordModule = (function () {
 		var parentLi=$(this).closest('.accordeon__li');
 		parentLi
 			.toggleClass('accord-active')
-			.find('.accordeon-content')
+			.children('.accordeon-content')
 			.stop(true, true)
 			.slideToggle();
 		parentLi
 			.siblings('.accord-active')
 			.toggleClass("accord-active")
-			.find('.accordeon-content')
+			.children('.accordeon-content')
 			.stop(true, true)
 			.slideUp();
 	}
