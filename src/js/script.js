@@ -1,5 +1,14 @@
 $(document).ready(function(){
-	$('.init_block').on('click', function(event) {
+  (function() {
+    if (window.pluso)if (typeof window.pluso.start == "function") return;
+    if (window.ifpluso==undefined) { window.ifpluso = 1;
+    var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+    s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+    s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+    var h=d[g]('body')[0];
+    h.appendChild(s);
+  }})();
+  $('.init_block').on('click', function(event) {
 		event.preventDefault();
     $(this).next().stop(true, true).slideToggle();
     $(this).toggleClass('init_activated');
@@ -27,6 +36,17 @@ $(document).ready(function(){
     pagination: true,
   	responsive: {
   	}
+  });
+    $('.article__gallery-wrap').owlCarousel({
+    items: 1,
+    nav: true,
+    navText: [],
+    loop: true,
+    // autoplay:true,
+    navigation: true,
+    pagination: true,
+    responsive: {
+    }
   });
 //------------------------------------------ Lightbox---------------------------------------
 
