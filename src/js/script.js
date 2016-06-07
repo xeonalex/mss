@@ -28,7 +28,24 @@ $(document).ready(function(){
   	responsive: {
   	}
   });
+//------------------------------------------ Lightbox---------------------------------------
 
+lightbox.option({
+  'resizeDuration': 50,
+  'wrapAround': true
+});
+
+$('.feedbacks-owl').owlCarousel({
+    items: 1,
+    nav: true,
+    navText: [],
+    loop: true,
+    // autoplay:true,
+    navigation: true,
+    // pagination: true,
+    responsive: {
+    }
+  });
 
   // конец READY
 });

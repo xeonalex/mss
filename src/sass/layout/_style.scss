@@ -5,6 +5,7 @@
 	display: block;
 	font-weight: normal;
 	line-height: 70px;
+	text-align: left;
 }
 .h1-und{
 	@include font-size(40px);
