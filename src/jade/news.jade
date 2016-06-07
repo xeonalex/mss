@@ -1,0 +1,105 @@
+extends _layout.jade
+block main
+	section.news__with-pictures
+		//- Секция с картинками по сторонам
+		.container
+			.breadcrumbs
+				ul.breadcrumbs__list
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Главная
+					li.breadcrumbs__item
+						a.breadcrumbs__link.breadcrumbs__link_active(href="#") Новости
+			.news__wrap
+				.news__title
+					h1.h1 Новости
+				.news__with-pictures_wrap
+					//- Блок новостей с большимим картинками со сторон
+					.picture-page-news
+						//- Большая картинка со стороны
+						img(src="img/news-image.jpg", alt="Новость")
+						a(href="#").picture__descr
+							.date 17.04.2016
+							.descr Анализ существенных финансовых и административных условий
+					.news-page-news
+						//- Новости
+						-for(var j=1;j<=3;j++)
+							.news-block
+								.news__img-line
+									.news-img
+										img(src='img/news.jpg' alt='news')
+									.news__img-line_datails
+										.news-date 21.02.2016
+										a(href='#' alt='читать новость').news-title Заголовок статьи
+								.news__content-wrap
+									.news__content
+										| Идейные соображения высшего порядка, а также сложившаяся
+										| структура организации играет важную роль в формировании
+										| модели развития. Значимость этих проблем настолько очевидна,
+										| что новая модель организационной
+										a.more-info(href='#' alt='больше') ...
+					.news-page-news
+						//- Новости
+						-for(var j=1;j<=3;j++)
+							.news-block
+								.news__img-line
+									.news-img
+										img(src='img/news.jpg' alt='news')
+									.news__img-line_datails
+										.news-date 21.02.2016
+										a(href='#' alt='читать новость').news-title Заголовок статьи
+								.news__content-wrap
+									.news__content
+										| Идейные соображения высшего порядка, а также сложившаяся
+										| структура организации играет важную роль в формировании
+										| модели развития. Значимость этих проблем настолько очевидна,
+										| что новая модель организационной
+										a.more-info(href='#' alt='больше') ...
+					.picture-page-news
+						//- Большая картинка со стороны
+						img(src="img/news-image.jpg", alt="Новость")
+						a(href="#").picture__descr
+							.date 17.04.2016
+							.descr Анализ существенных финансовых и административных условий
+					.justify
+						//- Этот блок нужен для правильного выравнивания по горизонтали блоков с картинками и новостями
+						//- Положение картинок и блоков с новостями меняется порядком в HTML
+	section.news__without-pictures
+		//- Блок с новостями БЕЗ картинки со стороны
+		.container
+			.news__wrap-without-pictures
+				-for(var j=1;j<=3;j++)
+					.news-block
+						.news__img-line
+							.news-img
+								img(src='img/news.jpg' alt='news')
+							.news__img-line_datails
+								.news-date 21.02.2016
+								a(href='#' alt='читать новость').news-title Заголовок статьи
+								.news__content-wrap
+									.news__content
+										| Идейные соображения высшего порядка, а также сложившаяся
+										| структура организации играет важную роль в формировании
+										| модели развития. Значимость этих проблем настолько очевидна,
+										| что новая модель организационной
+										a.more-info(href='#' alt='больше') ...
+			ul.padination-wrap
+				li
+					a.pagination-link.prev(href='#' alt='n-я страница')
+				li
+					a.pagination-link.active(href='#' alt='n-я страница') 1
+				li
+					span.pagination-link(href='#' alt='n-я страница') ...
+				li
+					a.pagination-link(href='#' alt='n-я страница') 2
+				li
+					a.pagination-link(href='#' alt='n-я страница') 3
+				li
+					a.pagination-link(href='#' alt='n-я страница') 4
+				li
+					a.pagination-link(href='#' alt='n-я страница') 5
+				li
+					span.pagination-link(href='#' alt='n-я страница') ...
+				li
+					a.pagination-link(href='#' alt='n-я страница') 12
+				li
+					a.pagination-link.next(href='#' alt='n-я страница')
