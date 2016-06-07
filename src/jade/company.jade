@@ -1,11 +1,176 @@
 extends _layout.jade
 block main
-	.about-company-title.container
-		.breadcrumbs
-			ul.breadcrumbs__list
-				li.breadcrumbs__item
-					a.breadcrumbs__link(href="#") Главная
-				li.breadcrumbs__item
-					a.breadcrumbs__link.breadcrumbs__link_active(href="#") О компании
-		.section__title
-			h1.h1 О компании
+	.about-company-title
+		.container
+			.breadcrumbs
+				ul.breadcrumbs__list
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Главная
+					li.breadcrumbs__item
+						a.breadcrumbs__link.breadcrumbs__link_active(href="#") О компании
+			.section__title
+				h1.h1 О компании
+	.about-company-menu
+		.container.menu-line
+			li.menu-line__li
+				a(href='#accr' alt='Аккредитация') Аккредитация
+			li.menu-line__li
+				a(href='#spec' alt='Специалисты') Специалисты
+			li.menu-line__li
+				a(href='#certif' alt='Сертификаты') Сертификаты
+			li.menu-line__li.menu-line_active
+				a(href='#feedbacks' alt='Отзывы') Отзывы
+			li.menu-line__li
+				a(href='#' alt='Партнеры') Партнеры
+			li.menu-line__li
+				a(href='#' alt='Вакансии') Вакансии
+			li.menu-line__li
+				a(href='#' alt='Реквизиты') Реквизиты
+	.accred-wrap
+		.accred__title.container
+			h1.h1-und#accr
+				| Аккредитация
+		.accred
+			.container
+				.accred-sertif
+					.sertif-wrap
+						img(src='img/content/accred1.jpg')
+					.sertif-wrap
+						img(src='img/content/accred2.jpg')
+				.accred-text-wrap
+					p
+						| На сегодняшний день каждый поставщик товаров, работ и услуг
+						| понимает важность наличия превосходства перед конкурентами.
+						| Безусловно, сертификат соответствия в системе «Международная
+						| Система Сертификации» позволит Вашей компании обойти конкурентов
+						| по всем позициям и выйти на новый уровень развития бизнеса.
+					p
+						| В Федеральном агентстве по техническому регулированию и
+						| метрологии система зарегистрирована под номером РОСС RU.З1180.
+						| 04ЖНМ0 от 19 марта 2014 года.
+					p
+						| По результатам сертификации организация получает сертификат
+						| соответствия системы установленного образца и знак соответствия
+						| системы.
+					p
+						| Как сертификат соответствия системы менеджмента качества, так и
+						| знак соответствия системы менеджмента качества могут
+						| использоваться владельцем сертификата в рекламных целях.
+	.specialists-wrap
+		.specialists__title.container
+			h1.h1-und#spec
+				| Специалисты
+			.after-title-block
+				| Специалисты нашей компании окажут профессиональную поддержку и проведут
+				| высококвалифицированную консультацию по всем направлениям деятельности
+				| системы добровольной сертификации «Международная Система Сертификации».
+		.specialists
+			.container
+				ul.specialist__list
+					-for (var j=1;j<=4;j++)
+						li.specialist-wrap
+							.specialist__img-wrap
+								img(src='img/content/spec-img.jpg')
+							.specialist__name
+								| Фамилия Имя
+							.specialist__data
+								| Специальность
+	.sertificats-wrap
+		.sertificats__title.container
+			h1.h1-und#certif
+				| Сертификаты
+		.sertificats
+			.container
+				ul.sertificats__list
+					-for (var j=1;j<=5;j++)
+						li.sertificat-wrap
+							a(href='img/content/spec-img.jpg' data-lightbox="sertificat-gallery").sertificat__img-wrap.light-b__init
+								img(src='img/content/sertif-img.jpg')
+	.feedbacks-wrap
+		.feedbacks__title.container
+			h1.h1-und#feedbacks
+				| Отзывы и благодарности
+		.container
+			.feedbacks-owl
+				.item
+					.feedback-wrap
+						.feedback__company-name
+							| Компания "Имя компании"
+						.feedback__text-wrap
+							.feedback__text
+								| Равным образом новая модель организационной деятельности
+								| влечет за собой процесс внедрения и модернизации
+								| соответствующий условий активизации. Задача организации, в
+								| особенности же новая модель организационной деятельности
+								| позволяет выполнять важные задания по разработке позиций,
+								| занимаемых участниками в отношении поставленных задач.
+								| Товарищи! постоянный количественный рост и сфера нашей
+								| активности позволяет выполнять важные задания по разработке
+								| форм развития. Разнообразный и богатый опыт новая модель
+								| организационной деятельности представляет собой интересный | эксперимент проверки
+							.feedback__author
+								| Фамилия Имя
+							.feedback__author-photo
+								| тег img
+						ul.feedback__img-block
+							li.feedback__img-wrap
+								img(src='img/content/sertif-img.jpg')
+							li.feedback__img-wrap
+								img(src='img/content/sertif-img.jpg')
+				.item
+					.feedback__company-name
+						| Компания "Имя компании"
+					.feedback__text-wrap
+						.feedback__text
+							| Задача организации, в
+							| особенности же новая модель организационной деятельности
+							| позволяет выполнять важные задания по разработке позиций,
+							| занимаемых участниками в отношении поставленных задач.
+							| Товарищи!
+						.feedback__author
+							| Фамилия Имя
+						.feedback__author-photo
+							| тег img
+					ul.feedback__img-block
+						li.feedback__img-wrap
+							img(src='img/content/sertif-img.jpg')
+						li.feedback__img-wrap
+							img(src='img/content/sertif-img.jpg')
+	.our-partners
+		.container
+			.partners__title
+				h1.h1-und
+					| Наши партнеры
+			.gallery-wrap
+				.gallery-banners
+					.item
+						.img-wrap
+							.img-item
+								img(src="img/icons/slide-item.png", alt="")
+							.img-item
+								img(src="img/icons/slide-item.png", alt="")
+							.img-item
+								img(src="img/icons/slide-item.png", alt="")
+							.img-item
+								img(src="img/icons/slide-item.png", alt="")
+					.item
+						.img-wrap
+							.img-item
+								img(src="img/icons/slide-item.png", alt="")
+							.img-item
+								img(src="img/icons/slide-item.png", alt="")
+							.img-item
+								img(src="img/icons/slide-item.png", alt="")
+							.img-item
+								img(src="img/icons/slide-item.png", alt="")
+					.item
+						.img-wrap
+							.img-item
+								img(src="img/icons/slide-item.png", alt="")
+							.img-item
+								img(src="img/icons/slide-item.png", alt="")
+							.img-item
+								img(src="img/icons/slide-item.png", alt="")
+							.img-item
+								img(src="img/icons/slide-item.png", alt="")
+

@@ -5,6 +5,7 @@
 	display: block;
 	font-weight: normal;
 	line-height: 70px;
+	text-align: left;
 }
 .h1-und{
 	@include font-size(40px);
@@ -72,7 +73,7 @@ body{
 .container {
 	min-width: 1200px;
 	max-width: 1200px;
-	margin: 0 auto;
+	margin: 0 auto !important;
 	padding: 0 15px;
 	@include clearfix();
 }
