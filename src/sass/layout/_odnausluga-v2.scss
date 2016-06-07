@@ -37,6 +37,9 @@
 			float: left;
 			width: 27%;
 			margin-right: 40px;
+			.h2{
+				margin-bottom: 20px;
+			}
 		}
 		&-right{
 			float: left;
@@ -61,6 +64,11 @@
 			line-height: 20px;
 			text-align: justify;
 			text-indent: 40px;
+		}
+	}
+	&__title-wrap{
+		.h1{
+			margin-bottom: 55px;
 		}
 	}
 	&__item{
