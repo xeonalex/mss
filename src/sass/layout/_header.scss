@@ -299,29 +299,13 @@
 
 .take-call {
 	vertical-align: middle;
-
-	display: inline-block;
-	width: 202px;
-	padding: 12px 16px;
-
-}
-.button-main-theme {
-	@include border-radius(5px);
-	background-image: -moz-linear-gradient( -90deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
-	background-image: -webkit-linear-gradient( -90deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
-	background-image: -ms-linear-gradient( -90deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
-	background-image: linear-gradient( -90deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
 	font-size: 18px;
 	line-height: 22px;
 	font-family: 'ubuntumedium';
 	font-weight: 600;
 	text-align: center;
-	@include transition(0.25s);
-	&:hover {
-		background-image: -moz-linear-gradient( -180deg, rgb(67,210,151) 0%, rgb(87,224,159) 54%, rgb(107,238,167) 100%);
-		background-image: -webkit-linear-gradient( -180deg, rgb(67,210,151) 0%, rgb(87,224,159) 54%, rgb(107,238,167) 100%);
-		background-image: -ms-linear-gradient( -180deg, rgb(67,210,151) 0%, rgb(87,224,159) 54%, rgb(107,238,167) 100%);
-		background-image: linear-gradient( -180deg, rgb(67,210,151) 0%, rgb(87,224,159) 54%, rgb(107,238,167) 100%);
+	display: inline-block;
+	width: 202px;
+	padding: 12px 16px;
 
-	}
 }

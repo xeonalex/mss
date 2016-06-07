@@ -10,9 +10,9 @@ block main
 							h2.slider-title
 							h3.slider-title ISO 91-2080...
 						.slider__content-nav
-							a.slider-buy.button-main-theme(href='#' alt='Заказать')
+							a.slider-buy.button-mth_green(href='#' alt='Заказать')
 								| Заказать
-							a.slider-details(href='#' alt='Подробнее')
+							a.slider-details.button-mth_dbgreen(href='#' alt='Подробнее')
 								|Подробнее
 			.item
 				img.slider-content_bg(src='img/slider-content_bg1.jpg')
@@ -22,9 +22,9 @@ block main
 							h2.slider-title Сертификация
 							h3.slider-title ISO 9001-2015...
 						.slider__content-nav
-							a.slider-buy.button-main-theme(href='#' alt='Заказать')
+							a.slider-buy.button-mth_green(href='#' alt='Заказать')
 								| Заказать
-							a.slider-details(href='#' alt='Подробнее')
+							a.slider-details.button-mth_dbgreen(href='#' alt='Подробнее')
 								|Подробнее
 	section.about-company
 		.container-inner
@@ -66,7 +66,7 @@ block main
 					.serv__title
 						h3.h3 Сертификация систем менеджмента качества
 					.serv__descr.small-fonts ХАССП, ГОСТ Р ИСО 9001 - 2015, Интегрированные cистемы менеджмента
-					a(href="#").more-links.link-btn
+					a(href="#").more-links.link-btn.podrobn-link
 						span Подробнее
 					.serv__icon
 						img(src="img/iso.png", alt="Img")
@@ -74,7 +74,7 @@ block main
 					.serv__title
 						h3.h3 Сертификация систем менеджмента качества
 					.serv__descr.small-fonts ХАССП, ГОСТ Р ИСО 9001 - 2015, Интегрированные cистемы менеджмента
-					a(href="#").more-links.link-btn
+					a(href="#").more-links.link-btn.podrobn-link
 						span Подробнее
 					.serv__icon
 						img(src="img/shield.png", alt="Img")
@@ -82,7 +82,7 @@ block main
 					.serv__title
 						h3.h3 Сертификация систем менеджмента качества
 					.serv__descr.small-fonts ХАССП, ГОСТ Р ИСО 9001 - 2015, Интегрированные cистемы менеджмента
-					a(href="#").more-links.link-btn
+					a(href="#").more-links.link-btn.podrobn-link
 						span Подробнее
 					.serv__icon
 						img(src="img/leaf.png", alt="Img")
@@ -90,7 +90,7 @@ block main
 					.serv__title
 						h3.h3 Сертификация систем менеджмента качества
 					.serv__descr.small-fonts ХАССП, ГОСТ Р ИСО 9001 - 2015, Интегрированные cистемы менеджмента
-					a(href="#").more-links.link-btn
+					a(href="#").more-links.link-btn.podrobn-link
 						span Подробнее
 					.serv__icon
 						img(src="img/tools.png", alt="Img")
@@ -98,7 +98,7 @@ block main
 					.serv__title
 						h3.h3 Сертификация систем менеджмента качества
 					.serv__descr.small-fonts ХАССП, ГОСТ Р ИСО 9001 - 2015, Интегрированные cистемы менеджмента
-					a(href="#").more-links.link-btn
+					a(href="#").more-links.link-btn.podrobn-link
 						span Подробнее
 					.serv__icon
 						img(src="img/note.png", alt="Img")
@@ -106,7 +106,7 @@ block main
 					.serv__title
 						h3.h3 Сертификация систем менеджмента качества
 					.serv__descr.small-fonts ХАССП, ГОСТ Р ИСО 9001 - 2015, Интегрированные cистемы менеджмента
-					a(href="#").more-links.link-btn
+					a(href="#").more-links.link-btn.podrobn-link
 						span Подробнее
 					.serv__icon
 						img(src="img/eac.png", alt="Img")
@@ -114,7 +114,7 @@ block main
 					.serv__title
 						h3.h3 Сертификация систем менеджмента качества
 					.serv__descr.small-fonts ХАССП, ГОСТ Р ИСО 9001 - 2015, Интегрированные cистемы менеджмента
-					a(href="#").more-links.link-btn
+					a(href="#").more-links.link-btn.podrobn-link
 						span Подробнее
 					.serv__icon
 						img(src="img/pct.png", alt="Img")
@@ -122,7 +122,7 @@ block main
 					.serv__title
 						h3.h3 Сертификация систем менеджмента качества
 					.serv__descr.small-fonts ХАССП, ГОСТ Р ИСО 9001 - 2015, Интегрированные cистемы менеджмента
-					a(href="#").more-links.link-btn
+					a(href="#").more-links.link-btn.podrobn-link
 						span Подробнее
 					.serv__icon
 						img(src="img/fire.png", alt="Img")
@@ -130,7 +130,7 @@ block main
 					.serv__title
 						h3.h3 Сертификация систем менеджмента качества
 					.serv__descr.small-fonts ХАССП, ГОСТ Р ИСО 9001 - 2015, Интегрированные cистемы менеджмента
-					a(href="#").more-links.link-btn
+					a(href="#").more-links.link-btn.podrobn-link
 						span Подробнее
 					.serv__icon
 						img(src="img/pen.png", alt="Img")
@@ -156,8 +156,8 @@ block main
 									| структура организации играет важную роль в формировании
 									| модели развития. Значимость этих проблем настолько очевидна,
 									| что новая модель организационной
-									a.more-info(href='#' alt='больше') ...
-					a(href='#' alt='читать все').read-all
+									a.podrobn-link(href='#' alt='больше') ...
+					a(href='#' alt='читать все').read-all.button-mth_dbgreen
 						| Читать все новости
 
 
@@ -176,8 +176,8 @@ block main
 									| структура организации играет важную роль в формировании
 									| модели развития. Значимость этих проблем настолько очевидна,
 									| что новая модель организационной
-									a.more-info(href='#' alt='больше') ...
-					a(href='#' alt='читать все').read-all
+									a.podrobn-link(href='#' alt='больше') ...
+					a(href='#' alt='читать все').read-all.button-mth_dbgreen
 						| Читать все публикации
 	section.partners
 		.container
