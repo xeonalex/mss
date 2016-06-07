@@ -25,7 +25,28 @@ block main
 				.form__title
 					h2.h2 Остались вопросы ?
 				form(action="#").contacts-form__wrap
-					.item
-						input(id='var' type='text').contacts-form__input
-						label(for='var').contacts-form__label-form
-							span Ввойдите
+					.wrap-to-clearfix
+						.form__inputs
+							.item-input
+								input(id='name' type='text' placeholder='Введите имя' ).contacts-form__input
+								label(for='name').contacts-form__label-form
+									span Введите имя
+							.item-input
+								input(id='phone' type='text' placeholder='Введите телефон' ).contacts-form__input
+								label(for='phone').contacts-form__label-form
+									span Введите телефон
+							.item-input
+								input(id='mail' type='text' placeholder='Введите Email').contacts-form__input
+								label(for='mail').contacts-form__label-form
+									span Введите Email
+						.form__textarea
+							.item-input
+								textarea.textarea(id="text" placeholder='Текст сообщения')
+								label(for='text').contacts-form__label-form
+									span Текст сообщения
+					.button__wrap
+						.google-captcha
+						.button-group
+							a(href="#").button-mth_dbgreen Очистить
+							a(href="#").button-mth_green Отправить
+							

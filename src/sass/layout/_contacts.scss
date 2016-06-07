@@ -70,22 +70,80 @@
 .contacts__adress-map{
 	margin-bottom: 65px;
 }
+.wrap-to-clearfix{
+	@include clearfix();
+}
+
 .form__title{
 	text-align: center;
-	margin-bottom: 25px;
+	margin-bottom: 55px;
 }
-.item{
+.item-input{
 	position: relative;
+	display: inline-block;
+	margin-bottom: 50px;
+
 	.contacts-form__input{
+		color: $gray;
 		padding:10px;
+		width: 375px;
+		height: 57px;
+		padding-left: 20px;
+		@include border-radius(3px);
+		border:1px solid $lightgray;
+		&:focus{
+			outline: 1px solid $dark;
+		}
 		&:focus+.contacts-form__label-form{
-			top:-30px;
+			top:-50px;
 		}
 	}
+	.textarea:focus+.contacts-form__label-form{
+		top:-50px;
+	}
 	.contacts-form__label-form{
+		z-index: -2;
+		transition: .5s;
 		position: absolute;
 		top:0;
 		left:0;
-		padding:10px;
+		padding-top:20px;
+		padding-left: 20px;
 	}
+}
+.form__inputs{
+	text-align: right;
+	width: 50%;
+	float: left;
+	padding: 0 25px;
+}
+.form__textarea{
+	text-align: left;
+	width: 50%;
+	float: right;
+	padding: 0 25px;
+}
+.textarea{
+	display: inline-block;
+	width: 375px;
+	height: 271px;
+	@include border-radius(3px);
+	border:1px solid $lightgray;
+	resize:none;
+	padding-left: 20px;
+	padding-top: 20px;
+	font-family: 'ubuntulight';
+		&:focus{
+			outline: 1px solid $dark;
+		}
+}
+.button__wrap{
+}
+.google-captcha,
+.button-group{
+}
+.google-captcha{
+	background: $gray;
+	width: 300px;
+	height: 75px;
 }

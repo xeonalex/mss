@@ -6,7 +6,7 @@ footer.footer
 		.footer__logo-wrap
 			a(href="#").footer__logo-link
 				img.footer__logo-img(src="img/icons/logo-footer.png", alt="")
-			p.footer__logo-dscr
+			a(href="#").footer__logo-dscr.service__link
 				| Международная Система Сертификации
 		.footer__service-items
 			.footer__service-item
@@ -17,11 +17,11 @@ footer.footer
 					ul.service__list-1
 						-for (var i = 0; i < service_1.length; i++)
 							li.service__item
-								a(href='#' alt='#{service_1[i]}') #{service_1[i]}
+								a.service__link(href='#' alt='#{service_1[i]}') #{service_1[i]}
 					ul.service__list-2
 						-for (var i = 0; i < service_2.length; i++)
 							li.service__item
-								a(href='#' alt='#{service_2[i]}') #{service_2[i]}
+								a.service__link(href='#' alt='#{service_2[i]}') #{service_2[i]}
 			.footer__service-item.footer__service-item--about
 				.footer__service-title.footer__service-title--mb
 					h4.h4
@@ -30,7 +30,7 @@ footer.footer
 					ul.service__list
 						-for (var i = 0; i < about.length; i++)
 							li.service__item
-								a(href='#' alt='#{about[i]}') #{about[i]}
+								a.service__link(href='#' alt='#{about[i]}') #{about[i]}
 			.footer__service-item.footer__service-item--addr
 				.footer__service-dscr
 					h4.h4
@@ -40,12 +40,12 @@ footer.footer
 				.footer__service-dscr
 					h4.h4
 						| Телефоны
-					a(href="tel:88129205990")
+					a.service__link(href="tel:88129205990")
 						| 8 (812)  920 59 90
 				.footer__service-dscr
 					h4.h4
 						| E-mail:
-					a(href="mailto:88129205990")
+					a.service__link(href="mailto:88129205990")
 						| mss-standart@mail.ru
 				ul.social__list
 					li.social__item
