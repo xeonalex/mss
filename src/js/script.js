@@ -16,7 +16,6 @@ $(document).ready(function(){
       $('body').on('click',function(){
         $('.init_activated').removeClass('init_activated')
         .next().stop(true, true).slideToggle();
-
       });
     }
 	});
@@ -73,6 +72,13 @@ $('.feedbacks-owl').owlCarousel({
     responsive: {
     }
   });
+// Popup всплывающая форма заказать дзвонок
+$('.ques-btn').add('.take-call').on('click',function(event){
+  event.preventDefault();
+  $('.popup__make-call-wrap').bPopup({
+      closeClass:'close-popup__make-call',
+  });
+});
 
   // конец READY
 });
@@ -145,20 +151,20 @@ google.maps.event.addDomListener(window, 'load', initialize);
  });
  // Валидация
 
-   var $forms = $('.contacts-form__wrap');
+   var $forms = $('.rf');
        $forms.on('submit', _validate);
        $forms.on('reset', _clear);
     function _validate(e) {
         e.preventDefault();
         var
             $this = $(this),
-            $inputs = $this.find('.contacts-form__input'),
+            $inputs = $this.find('.rfield'),
             valid = true;
 
         $inputs.each(function () {
             var
                 $this = $(this),
-                $group = $this.closest('.item-input'),
+                $group = $this.closest('.rfield-parent'),
                 value = $this.val();
 
             if (
@@ -187,8 +193,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
     function _clear(){
         $(this)
-            .find('.item-input')
+            .find('.rfield-parent')
             .removeClass('form__group_valid form__group_no-valid')
             .end()
-            .find('.contacts-form__input')
+            .find('.rfield')
     }

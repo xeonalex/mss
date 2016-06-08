@@ -16,7 +16,7 @@ block main
 						.adress__title Адрес
 						.adress__descr 192029, Санкт-Петербург, пр. Обуховской Обороны, д. 86, лит.К, пом. 2Н
 					.phone.contacts__item
-						a(href="tel:8 (812) 920 59 90") 8 (812) 920 59 90  
+						a(href="tel:8 (812) 920 59 90") 8 (812) 920 59 90
 					.mail.contacts__item
 						a(href="mailto:mss-standart@mail.ru") mss-standart@mail.ru
 				.contacts__map
@@ -24,19 +24,19 @@ block main
 			.contacts__form
 				.form__title
 					h2.h2 Остались вопросы ?
-				form(action="#").contacts-form__wrap
+				form(action="#").contacts-form__wrap.rf
 					.wrap-to-clearfix
 						.form__inputs
-							.item-input
-								input(id='name' type='text' placeholder='Введите имя' ).contacts-form__input
+							.item-input.rfield-parent
+								input(id='name' type='text' placeholder='Введите имя' ).contacts-form__input.rfield
 								label(for='name').contacts-form__label-form
 									span Введите имя
-							.item-input
-								input(id='phone' type='text' placeholder='Введите телефон' ).contacts-form__input
+							.item-input.rfield-parent
+								input(id='phone' type='text' placeholder='Введите телефон' ).contacts-form__input.rfield
 								label(for='phone').contacts-form__label-form
 									span Введите телефон
-							.item-input
-								input(id='mail' type='email' placeholder='Введите Email').contacts-form__input
+							.item-input.rfield-parent
+								input(id='mail' type='email' placeholder='Введите Email').contacts-form__input.rfield
 								label(for='mail').contacts-form__label-form
 									span Введите Email
 						.form__textarea
@@ -49,4 +49,4 @@ block main
 						.button-group
 							button(type='reset').button-mth_dbgreen  Очистить
 							button(type='submit').button-mth_green Отправить
-							
+

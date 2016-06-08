@@ -9,13 +9,24 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),// Сжатие JPG, PNG, SVG, GIF
     uglify = require('gulp-uglify'), // Минификация JS
     plumber = require('gulp-plumber'),
-    watch = require('gulp-watch');
-
+    watch = require('gulp-watch'),
+    changed = require('gulp-changed');
 
 //Собираем Jade ( html )
+gulp.task('jade-includes', function() {
+  return gulp.src(['./src/jade/*.jade','!./src/jade/_*.jade'])
+    .pipe(plumber())
+    .pipe(jade({
+       pretty: true
+    }))
+    .on('error', console.log)
+    .pipe(gulp.dest('./build/'))
+    .pipe(browserSync.stream());
+  });
+//Собираем только изменившийся файл Jade ( html )
 gulp.task('jade-templates', function() {
   return gulp.src(['./src/jade/*.jade','!./src/jade/_*.jade'])
-    // .pipe(changed('./build/', {extension: '.html'}))
+    .pipe(changed('./build/', {extension: '.html'}))
     .pipe(plumber())
     .pipe(jade({
        pretty: true
@@ -49,7 +60,7 @@ gulp.task('sass-dev', function() {
 
 //Сжатие изображений
 gulp.task('img', function() {
-  return gulp.src('src/img/**/**/**')
+  return gulp.src(['src/img/**/**/*.png','src/img/**/**/*.jpg','src/img/**/**/*.svg'])
     .pipe(imagemin({ optimizationLevel: 3, progressive: true}))
     .pipe(gulp.dest('build/img/'));
 });
@@ -91,13 +102,16 @@ gulp.task('fonts', function(){
 });
 
 // WATCH
-gulp.task('default', ['jade-templates','sass-dev','img','js-vendor','js','favicon','fonts'], function () {
+gulp.task('default', ['jade-includes','sass-dev','img','js-vendor','js','favicon','fonts'], function () {
     browserSync.init({
       server : './build',
       host : '3002'
     });
 
-    watch('./src/jade/**/*.jade', function() {
+    watch('./src/jade/_includes/**/*.jade', function() {
+      gulp.start('jade-includes');
+    });
+    watch('./src/jade/*.jade', function() {
       gulp.start('jade-templates');
     });
 
@@ -113,7 +127,7 @@ gulp.task('default', ['jade-templates','sass-dev','img','js-vendor','js','favico
       gulp.start('js-vendor');
     });
 
-    watch('./src/img/**/*', function() {
+    watch(['./src/img/**/**/*.png','./src/img/**/**/*.jpg','./src/img/**/**/*.svg'], function() {
       gulp.start('img');
     });
 

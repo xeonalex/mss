@@ -103,12 +103,20 @@ header.header
 						li.dropped-menu__li
 							a.dropped-menu__li-title(href='#' alt='роздел')
 								| Сертификация систем менеджмента качества
-
-
-
-
 			.contancts-block
 				a(href='tel:+88129205990').contacts__link 8 (812) 920 59 90
 				a(href='mailto:mss-standart@mail.ru').contacts__link mss-standart@mail.ru
 			a(href='#').take-call.button-mth_green Заказать звонок
+// popup окно для формы заказа дзвонка
+.popup__make-call-wrap
+	h2.popup-title
+		| Заказать звонок
+	form.popup-form
+		label
+			input.popup-input(type="text" name="name" placeholder="Введите имя")
+		label
+			input.popup-input(type="text" name="phone" placeholder="Введите телефон")
+		button.popup-smbt.button-mth_green(type="submit" value="Заказать звонок")
+			| Заказать звонок
+		.close-popup__make-call
 
