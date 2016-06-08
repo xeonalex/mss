@@ -1,3 +1,56 @@
+.popup__make-call-wrap{
+	width: 315px;
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	.popup-form{
+		padding: 50px 30px 20px;
+		background: #fff;
+		border-radius: 4px;
+		position: relative;
+		-webkit-box-shadow: 0px 0px 26px 3px rgba(0,0,0,0.31);
+		-moz-box-shadow: 0px 0px 26px 3px rgba(0,0,0,0.31);
+		box-shadow: 0px 0px 26px 3px rgba(0,0,0,0.31);
+	}
+	.close-popup{
+		position: absolute;
+		background: url('../img/icons/close-popup.png');
+		width: 12px;
+		height: 13px;
+		top: 5px;
+		right: 5px;
+		@include opacity(.2);
+		&:hover{
+			@include opacity(1);
+		}
+	}
+	.popup-title{
+		@include font-size(40px);
+		color: #000; //fff
+		text-align: center;
+		margin-bottom: 25px;
+	}
+	.popup-input{
+		width: 100%;
+		padding: 20px;
+		border-radius: 4px;
+		border: 1px solid #e6e9ed;
+		outline: none;
+		margin-bottom: 50px;
+		&:last-child{
+			margin-bottom: 15px;
+		}
+	}
+	.popup-smbt{
+		@include font-size(18px);
+		width: 100%;
+		border: none;
+		padding: 15px 40px;
+		outline: none;
+	    font-family: 'ubuntumedium';
+	    font-weight: 600;
+	}
+}
 .small-fonts{
 	@include font-size(12px);
 }
