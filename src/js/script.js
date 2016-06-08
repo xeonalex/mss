@@ -9,9 +9,16 @@ $(document).ready(function(){
     h.appendChild(s);
   }})();
   $('.init_block').on('click', function(event) {
-		event.preventDefault();
+    event.stopPropagation();
     $(this).next().stop(true, true).slideToggle();
     $(this).toggleClass('init_activated');
+    if ($(this).hasClass('init_activated')) {
+      $('body').on('click',function(){
+        $('.init_activated').removeClass('init_activated')
+        .next().stop(true, true).slideToggle();
+
+      });
+    }
 	});
 
 	$('.carousel-main').owlCarousel({
@@ -137,7 +144,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
  });
  });
  // Валидация
-  
+
    var $forms = $('.contacts-form__wrap');
        $forms.on('submit', _validate);
        $forms.on('reset', _clear);

@@ -253,12 +253,17 @@
 	&:after {
 		content: '';
 		display: inline-block;
-		width: 10px;
-		height: 5px;
 		position: absolute;
 		right: 18px;
 		top: 22px;
-		background: url('../img/icons/arrow_drop.png') center center no-repeat;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 5px 5px 0 5px;
+		border-color: $green-header transparent transparent transparent;
+		line-height: 0px;
+		_border-color: $green-header #000000 #000000 #000000;
+		_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
 	}
 	span {
 		display: inline-block;
