@@ -1,0 +1,83 @@
+.profi-list{
+	.profi-list__title{
+		text-align: left;
+	}
+}
+.profi-wrap{
+	padding-bottom: 20px;
+}
+.profi-header-line{
+	background: rgba(233,252,243,.7);
+	padding: 18px 0 ;
+	.profi__name{
+		font-family: ubuntubold;
+		font-size: 24px;
+		padding-bottom: 20px;
+	}
+}
+.profi-info-line{
+	padding: 35px 15px;
+	@include clearfix;
+}
+
+.photo-wrapper
+.profi-info-wrapper{
+	display: inline-block;
+	vertical-align: top;
+}
+.photo-wrapper{
+	float: left;
+	.photo-wrap{
+		background: #f9f9fa;
+		width: 265px;
+		height: 338px;
+		@include box-shadow(0 1px 5px 0 rgba(67,74,84,.2));
+
+		img{
+			max-height: 100%;
+			max-width: 100%;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+.profi-info-wrapper{
+	margin-left: 300px;
+	padding-left: 15px;
+}
+
+.profi-sertificat-wrap{
+	display: inline-block;
+}
+.profi-sertificats__list{
+	margin-left: -35px;
+	margin-bottom: 15px;
+}
+.profi-sertificat-wrap{
+	display: inline-block;
+	margin-left: 32px;
+	background-color: rgb(249, 249, 250);
+	box-shadow: 0px 1px 5px 0px rgba(67, 74, 84, 0.2);
+	width: 188px;
+	height: 219px;
+}
+.profi-sertificat__img-wrap{
+	width: 188px;
+	height: 219px;
+	display: block;
+	img{
+		max-width: 100%;
+		max-height: 100%;
+		display: block;
+		margin: 0 auto;
+	}
+}
+.profi-info-wrapper{
+	.item{
+		font-family: 'ubuntubold';
+		font-weight: 600;
+	}
+	p{
+		margin-bottom: 20px;
+	}
+}

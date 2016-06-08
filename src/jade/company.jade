@@ -21,11 +21,11 @@ block main
 			li.menu-line__li.menu-line_active
 				a(href='#feedbacks' alt='Отзывы') Отзывы
 			li.menu-line__li
-				a(href='#' alt='Партнеры') Партнеры
+				a(href='#partners' alt='Партнеры') Партнеры
 			li.menu-line__li
-				a(href='#' alt='Вакансии') Вакансии
+				a(href='#vacancies' alt='Вакансии') Вакансии
 			li.menu-line__li
-				a(href='#' alt='Реквизиты') Реквизиты
+				a(href='#recv' alt='Реквизиты') Реквизиты
 	.accred-wrap
 		.accred__title.container
 			h1.h1-und#accr
@@ -70,7 +70,7 @@ block main
 					-for (var j=1;j<=4;j++)
 						li.specialist-wrap
 							.specialist__img-wrap
-								img(src='img/content/spec-img.jpg')
+								img(src='img/content/specialist1.png')
 							.specialist__name
 								| Фамилия Имя
 							.specialist__data
@@ -85,7 +85,7 @@ block main
 					-for (var j=1;j<=5;j++)
 						li.sertificat-wrap
 							a(href='img/content/spec-img.jpg' data-lightbox="sertificat-gallery").sertificat__img-wrap.light-b__init
-								img(src='img/content/sertif-img.jpg')
+								img(src='img/content/accred1.jpg')
 	.feedbacks-wrap
 		.feedbacks__title.container
 			h1.h1-und#feedbacks
@@ -111,12 +111,12 @@ block main
 							.feedback__author
 								| Фамилия Имя
 							.feedback__author-photo
-								| тег img
+								img(src='img/content/specialist.png')
 						ul.feedback__img-block
 							li.feedback__img-wrap
-								img(src='img/content/sertif-img.jpg')
+								img(src='img/content/accred1.jpg')
 							li.feedback__img-wrap
-								img(src='img/content/sertif-img.jpg')
+								img(src='img/content/accred2.jpg')
 				.item
 					.feedback__company-name
 						| Компания "Имя компании"
@@ -130,16 +130,16 @@ block main
 						.feedback__author
 							| Фамилия Имя
 						.feedback__author-photo
-							| тег img
+							img(src='img/content/specialist1.png')
 					ul.feedback__img-block
 						li.feedback__img-wrap
-							img(src='img/content/sertif-img.jpg')
+							img(src='img/content/accred2.jpg')
 						li.feedback__img-wrap
-							img(src='img/content/sertif-img.jpg')
+							img(src='img/content/accred1.jpg')
 	.our-partners
 		.container
 			.partners__title
-				h1.h1-und
+				h1.h1-und#partners
 					| Наши партнеры
 			.gallery-wrap
 				.gallery-banners
@@ -176,15 +176,15 @@ block main
 	.vacancy-block-wrap
 		.container-inner
 			.vacancy__title
-				h1.h1-und#certif
+				h1.h1-und#vacancies
 					| Вакансии
 			.vacancy
-					ul.vacancy__list.accordeon
+					ul.accord-mth__list.accordeon
 						-for (var j=1;j<=3;j++)
-							li.vacancy-wrap.accordeon__li
-								.init-vacancy-accord.accordeon-init
+							li.accord-mth__item.accordeon__li
+								.accord-mth__init.accordeon-init
 									| Название вакансии
-								.vacancy-accord-content.accordeon-content
+								.accord-mth__content.accordeon-content
 									p
 										strong
 											| Ключевая обязанность: организация системного
@@ -210,7 +210,7 @@ block main
 	.requisites-block-wrap
 		.container-inner
 			.requisites__title
-				h1.h1-und#certif
+				h1.h1-und#recv
 					| Реквизиты
 			.requisites
 				ul.requisites-text-block

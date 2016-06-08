@@ -56,20 +56,24 @@ body{
 .wrapper{
 	min-width: 1200px;
 	position: relative;
-	&:before{
-		content: '';
-		position: absolute;
-		display: block;
-		width: 100%;
-		background: url(../img/bg.svg);
-		-webkit-background-size: cover;
-			background-size: cover;
-		background-position-x: 27%;
-		bottom: 0;
-		top: 0;
-		@include opacity(.2);
-		z-index: -5;
-	}
+	// background: url(../img/bg.svg);
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position-x: 27%;
+	// &:before{
+	// 	content: '';
+	// 	position: absolute;
+	// 	display: block;
+	// 	width: 100%;
+	// 	background: url(../img/bg.svg);
+	// 	-webkit-background-size: cover;
+	// 		background-size: cover;
+	// 	background-position-x: 27%;
+	// 	bottom: 0;
+	// 	top: 0;
+	// 	@include opacity(.2);
+	// 	z-index: -5;
+	// }
 }
 
 .container {
