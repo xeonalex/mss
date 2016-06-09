@@ -79,6 +79,28 @@ $('.ques-btn').add('.take-call').on('click',function(event){
       closeClass:'close-popup__make-call',
   });
 });
+$('.promezhutuslugi__init-left').on('click',function(){
+  if ($(this).hasClass('active')){
+    $('.promezhutuslugi__left-block').animate({
+        width: "370px"
+      });
+    $('.menu-promezhutuslugi__list').removeAttr('style');
+  } else {
+    $('.menu-promezhutuslugi__list')
+    .css({
+      visibility:'hidden',
+      width: "370px"
+    });
+    $('.promezhutuslugi__left-block').animate({
+        width: "30px"
+    });
+  }
+  $(this).toggleClass('active'); // добавляем активный класс для слежки
+});
+// позиционируем стрелку относительно активного пункта меню
+var activeSideMenu = $('.promezhutuslugi__left-block .menu-promezhutuslugi__item')
+    .index($('.menu-promezhutuslugi__item_active')) + 1;
+
 
   // конец READY
 });
