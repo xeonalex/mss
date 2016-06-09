@@ -61,6 +61,7 @@ gulp.task('sass-dev', function() {
 //Сжатие изображений
 gulp.task('img', function() {
   return gulp.src(['src/img/**/**/*.png','src/img/**/**/*.jpg','src/img/**/**/*.svg'])
+    .pipe(changed('./build/img/'))
     .pipe(imagemin({ optimizationLevel: 3, progressive: true}))
     .pipe(gulp.dest('build/img/'));
 });
@@ -88,6 +89,7 @@ gulp.task('js-vendor', function(){
 // Favicon
 gulp.task('favicon', function(){
   return gulp.src('src/favicon/*')
+  .pipe(changed('./build/favicon/'))
   .pipe(plumber())
   .pipe(gulp.dest('build/favicon/'))
   .pipe(browserSync.stream());
@@ -96,6 +98,7 @@ gulp.task('favicon', function(){
 // Fonts
 gulp.task('fonts', function(){
   return gulp.src('src/fonts/*')
+  .pipe(changed('./build/css/fonts/'))
   .pipe(plumber())
   .pipe(gulp.dest('build/css/fonts/'))
   .pipe(browserSync.stream());
