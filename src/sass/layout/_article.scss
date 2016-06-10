@@ -58,7 +58,7 @@
 			height: 390px;
 		}
 		&-dscr{
-			width: 58%;	
+			width: 58%;
 			float: right;
 		}
 	}
@@ -73,11 +73,10 @@
 		}
 	}
 	&__links-wrap{
-		background-color: #e9fcf2;
+		background-color: rgba(233,252,242,0.5);
 		height: 40px;
 		line-height: 40px;
 		margin-bottom: 55px;
-		@include opacity(.6);
 		.container{
 			@include clearfix();
 			> a{
