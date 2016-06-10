@@ -100,7 +100,7 @@ $('.promezhutuslugi__init-left').on('click',function(){
 // позиционируем стрелку относительно активного пункта меню
 var activeSideMenu = $('.promezhutuslugi__left-block .menu-promezhutuslugi__item')
     .index($('.menu-promezhutuslugi__item_active')) + 1;
-
+// $('.promezhutuslugi__right-block')
 
   // конец READY
 });

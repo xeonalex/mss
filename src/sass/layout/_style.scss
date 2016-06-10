@@ -56,24 +56,30 @@ body{
 .wrapper{
 	min-width: 1200px;
 	position: relative;
-	// background: url(../img/bg.svg);
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-position-x: 27%;
-	// &:before{
-	// 	content: '';
-	// 	position: absolute;
-	// 	display: block;
-	// 	width: 100%;
-	// 	background: url(../img/bg.svg);
-	// 	-webkit-background-size: cover;
-	// 		background-size: cover;
-	// 	background-position-x: 27%;
-	// 	bottom: 0;
-	// 	top: 0;
-	// 	@include opacity(.2);
-	// 	z-index: -5;
-	// }
+		// background: url(../img/bg.svg);
+		// -webkit-background-size: cover;
+		// background-size: cover;
+		// background-attachment: fixed;
+		// background-position: bottom right;
+	&:before{
+		content: '';
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		z-index: -10;
+		background: url(../img/bg.svg);
+		-webkit-background-size: cover;
+		background-size: cover;
+		background-attachment: fixed;
+		background-position: bottom right;
+		// @include opacity(0.5);
+
+	}
+
+
 }
 
 .container {
@@ -176,6 +182,8 @@ body{
 		&:after{
 			background: url('../img/icons/arrow-border-h.png') no-repeat;
 		}
+	}
+	&.und:hover{
 		text-decoration: underline;
 	}
 }
@@ -200,6 +208,8 @@ body{
 		&:before{
 			background: url('../img/icons/arrow-border-h.png') no-repeat;
 		}
+	}
+	&.und:hover{
 		text-decoration: underline;
 	}
 }

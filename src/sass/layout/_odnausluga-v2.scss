@@ -96,7 +96,7 @@
 			display: -moz-box;
 			display: -ms-flexbox;
 			display: -webkit-flex;
-			display: flex;  
+			display: flex;
 			align-items: stretch;
 			margin-bottom: 35px;
 			-webkit-box-shadow: 0 15px 20px -19px rgba(0,0,0,.5);
@@ -146,7 +146,7 @@
 	    width: 100%;
 		.price-wrap{
 			margin-bottom: 18px;
-			.item_price, 
+			.item_price,
 			.h2{
 				color: #cc2226;
 				font-family: 'ubuntubold';
@@ -213,20 +213,29 @@
 .more{
 	&__ques{
 		&-wrap{
-			height: 190px;
-			background: #53b593;
+			position: relative;
+			padding: 50px 0;
 			.container{
-				@include clearfix();
+				position: relative;
+			}
+			&:before{
+				position: absolute;
+				content: '';
+				display: block;
+				width: 100%;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				background: #53b593;
+				z-index: -11;
 			}
 		}
 		&-title{
-			float: left;
-			position: relative;
-			bottom: 50%;
-			transform: translateY(50%);
+			padding-right: 175px;
 			.h1{
-				margin-bottom: 0;
+				margin-bottom: 25px;
 				color: #fff;
+				line-height: 1;
 			}
 			.span{
 				@extend .h2;
@@ -235,10 +244,9 @@
 			}
 		}
 		&-btn{
-			float: right;
-			position: relative;
-			bottom: 100%;
-			transform: translateY(100%);
+			display: inline-block;
+			right: 15px;
+			@include vertical-align-abs;
 			.ques-btn{
 				@extend .h2;
 				display: block;
