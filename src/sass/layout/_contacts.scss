@@ -154,6 +154,8 @@
 	margin-bottom: 40px;
 }
 .button-group{
+	font-family: 'ubuntubold';
+	@include font-size(14px);
 	.button-mth_dbgreen{
 		padding: 5px 15px;
 	}

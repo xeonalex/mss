@@ -66,6 +66,7 @@
 	}
 	&__descr{
 		margin-bottom: 57px;
+		line-height: 20px;
 	}
 }
 .shema{
@@ -119,6 +120,21 @@
 	border: 2px solid $green;
 	border-radius:50%;
 	background: #ffffff;
+	margin: 0 auto 20px;
+	&:before{
+		box-sizing:border-box;
+		position: absolute;
+		left: -10px;
+		z-index: 5;
+		width: 35px;
+		height:35px;
+		@include border-radius(50%);
+		background: $lightgreen;
+		vertical-align:middle;
+		padding-top: 3px;
+		@include font-size(24px);
+		font-family: 'ubuntubold';
+	}
 	img{
 		margin-top: 28px;
 		width: 45px;
@@ -141,20 +157,20 @@
 .img-number-5:before{
 	content:"5";
 }
-.shema__img:before{
-	box-sizing:border-box;
-	position: absolute;
-	left: 0;
-	z-index: 5;
-	width: 35px;
-	height:35px;
-	@include border-radius(50%);
-	background: $lightgreen;
-	vertical-align:middle;
-	padding-top: 5px;
-	@include font-size(24px);
-	font-family: 'ubuntu_monobold';
-}
+// .shema__img:before{
+// 	box-sizing:border-box;
+// 	position: absolute;
+// 	left: 0;
+// 	z-index: 5;
+// 	width: 35px;
+// 	height:35px;
+// 	@include border-radius(50%);
+// 	background: $lightgreen;
+// 	vertical-align:middle;
+// 	padding-top: 5px;
+// 	@include font-size(24px);
+// 	font-family: 'ubuntu_monobold';
+// }
 .services-block{
 	&__wrap{
 		display: inline-block;
