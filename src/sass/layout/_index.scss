@@ -112,35 +112,34 @@
 	}
 }
 .shema__wrap{
-
-.img-wrap{
-	position: relative;
-	width: 105px;
-	height: 105px;
-	border: 2px solid $green;
-	border-radius:50%;
-	background: #ffffff;
-	margin: 0 auto 20px;
-	&:before{
-		box-sizing:border-box;
-		position: absolute;
-		left: -10px;
-		z-index: 5;
-		width: 35px;
-		height:35px;
-		@include border-radius(50%);
-		background: $lightgreen;
-		vertical-align:middle;
-		padding-top: 3px;
-		@include font-size(24px);
-		font-family: 'ubuntubold';
+	.img-wrap{
+		position: relative;
+		width: 105px;
+		height: 105px;
+		border: 2px solid $green;
+		border-radius:50%;
+		background: #ffffff;
+		margin: 0 auto 20px;
+		&:before{
+			box-sizing:border-box;
+			position: absolute;
+			left: -10px;
+			z-index: 5;
+			width: 35px;
+			height:35px;
+			@include border-radius(50%);
+			background: $lightgreen;
+			vertical-align:middle;
+			padding-top: 3px;
+			@include font-size(24px);
+			font-family: 'ubuntubold';
+		}
+		img{
+			margin-top: 28px;
+			width: 45px;
+			height: 45px;
+		}
 	}
-	img{
-		margin-top: 28px;
-		width: 45px;
-		height: 45px;
-	}
-}
 }
 .img-number-1:before{
 	content:"1";
@@ -171,10 +170,12 @@
 // 	@include font-size(24px);
 // 	font-family: 'ubuntu_monobold';
 // }
+
 .services-block{
 	&__wrap{
 		display: inline-block;
 		text-align: justify;
+		padding-bottom: 3px;
 		&:last-child:after{
 			content: '';
 			width: 100%;
@@ -187,6 +188,7 @@
 		position: relative;
 		width: 250px;
 		min-height: 220px;
+		text-align: left;
 		padding: 20px 20px 60px 20px;
 		@include border-radius (5px);
 		box-shadow: 0px 1px 10px 0px rgba(67, 74, 84, 0.75);
@@ -196,7 +198,7 @@
 	&__item:hover{
 		@include transition(.25s);
 		cursor: pointer;
-		background: $lime;
+		background: #cbe8dd;
 	}
 }
 .serv{
@@ -204,6 +206,7 @@
 		margin-bottom: 21px;
 		text-align: left;
 		color: $green;
+		line-height: 23px;
 	}
 	&__descr{
 
@@ -217,13 +220,13 @@
 		img{
 			max-width: 100%;
 			max-height: 100%;
-			@include opacity(0.3);
 		}
 	}
 }
 .more-links{
 	position: absolute;
 	bottom:20px;
+	color: $dark;
 }
 
 .carousel-wrap {
@@ -362,6 +365,7 @@
 	@include clearfix;
 	.read-all{
 		float: right;
+
 	}
 }
 .news-wrap{
@@ -385,6 +389,7 @@
 	.read-all{
 		float: right;
 		margin-right: 30px;
+		font-family: 'ubuntubold';
 	}
 }
 .publications-wrap{
