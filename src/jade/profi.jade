@@ -20,7 +20,6 @@ block main
 							| Фамилия Имя
 						.specialist__data
 							| Специальность
-	-for (var i=1;i<=2;i++)
 		.profi-wrap
 			.profi-header-line
 				.container
@@ -53,9 +52,34 @@ block main
 						ul.profi-sertificats__list
 							-for (var j=1;j<=4;j++)
 								li.profi-sertificat-wrap
-									a(href='img/content/accred#{i}.jpg' data-lightbox="sertificat-gallery-profi-#{i}").profi-sertificat__img-wrap.light-b__init
-										img(src='img/content/accred#{i}.jpg')
-
+									a(href='img/content/accred1.jpg' data-lightbox="sertificat-gallery-profi-1").profi-sertificat__img-wrap.light-b__init
+										img(src='img/content/accred1.jpg')
+		.profi-wrap
+			.profi-header-line
+				.container
+					.profi__name
+						| Фамилия Имя
+					.profi__spec
+						| Специальность
+			.profi-info-line.container
+				.photo-wrapper
+					.photo-wrap
+						img(src='img/content/specialist.png')
+				.profi-info-wrapper
+					.profi-info__text
+						p.item
+							| Опыт работы:
+						p
+							|В промышленности (производство сталей и сплавов, оборонная,
+							| химическая и атомная промышленность, пищевая промышленность)
+							| более 25 лет, опыт работы экспертом-внешним аудитором более 10 лет.
+						p.item
+							| Образование:
+						p
+							| Пензенский государственный университет, Пенза. Приборостроение,
+							| машиностроение, Инженер-технолог по обработке металлов резанием.
+							| ППРТ (Пензенский приборостроительный техникум). Обработка
+							| металлов резанием, Прикладная механика.
 
 
 

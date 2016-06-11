@@ -1,3 +1,6 @@
+.promezhutuslugi{
+	position: relative;
+}
 .promezhutuslugi__content-wrap{
 	@include clearfix();
 	margin-bottom: 90px;
@@ -5,12 +8,13 @@
 .promezhutuslugi__left-block{
 	float:left;
 	width: 370px;
-	margin-right: 75px;
+	margin-right: 45px;
 	padding: 40px 20px;
 	background: #fff;
 	border: 1px solid $lightgray;
 	@include border-radius(3px);
 	position: relative;
+	@include box-shadow(-0.523px 4.973px 6px 0px rgba(67, 74, 84, 0.35));
 
 	.menu-promezhutuslugi__list{
 		@include transition(0.3s);
@@ -75,6 +79,7 @@
 }
 .promezhutuslugi__right-block{
 	float:left;
+	margin-left: 30px;
 	width: 680px;
 	background: #f9f9fa;
 	padding: 20px;

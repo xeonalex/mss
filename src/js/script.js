@@ -80,20 +80,49 @@ $('.ques-btn').add('.take-call').on('click',function(event){
   });
 });
 $('.promezhutuslugi__init-left').on('click',function(){
+    var left=$('.promezhutuslugi__wrap').offset().left-70;
   if ($(this).hasClass('active')){
     $('.promezhutuslugi__left-block').animate({
-        width: "370px"
-      });
-    $('.menu-promezhutuslugi__list').removeAttr('style');
+        left: left+'px'
+      },
+      {
+        duration: 500,
+        complete:  function(){
+                    $(this).css({
+                      position: 'relative',
+                      left: '0'});
+                  }
+    })
+    .animate({
+        width: '370px'
+      },
+      {
+        duration: 1000,
+        complete:  function(){
+                    $('.menu-promezhutuslugi__list').css({visibility:'visible'}).removeAttr('style');
+                    $(this).removeAttr('style');
+                  }
+    });
   } else {
     $('.menu-promezhutuslugi__list')
     .css({
       visibility:'hidden',
       width: "370px"
     });
-    $('.promezhutuslugi__left-block').animate({
-        width: "30px"
-    });
+    $('.promezhutuslugi__left-block')
+    .animate({
+            width: "30px",
+            left: "-48px"
+        },
+        {duration: 1000,
+            complete:  function(){ $(this).css({
+                                                position: "absolute",
+                                                left: left+'px'
+                                              });}
+    })
+    .animate({
+        left: '0',
+    }, {duration: 500});
   }
   $(this).toggleClass('active'); // добавляем активный класс для слежки
 });

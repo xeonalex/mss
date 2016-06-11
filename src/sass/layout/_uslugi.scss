@@ -36,7 +36,7 @@
 			_filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
 		}
 		&:hover{
-			color: $lightgreen;
+			text-decoration: underline;
 			&:after{
 				border-color: $green transparent transparent transparent;
 			}
@@ -104,8 +104,9 @@
 			&:after{
 				display: inline-block;
 				margin-left: 4px;
-				content: 'P';
-				text-decoration: line-through;
+				content: '\20BD';
+			    font-family: sans-serif;
+			    font-weight: 600;
 			}
 		}
 	}
