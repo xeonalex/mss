@@ -21,12 +21,13 @@ block main
 							.date 17.04.2016
 							.descr Анализ существенных финансовых и административных условий
 					.news-page-news
-						//- Новости
+						//- Новости 3 5 6 9 10	
 						-for(var j=1;j<=3;j++)
 							.news-block
 								.news__img-line
-									.news-img
-										img(src='img/news.jpg' alt='news')
+									if j!=3
+										.news-img
+											img(src='img/news.jpg' alt='news')
 									.news__img-line_datails
 										.news-date 21.02.2016
 										a(href='#' alt='читать новость').news-title Заголовок статьи
@@ -36,14 +37,15 @@ block main
 										| структура организации играет важную роль в формировании
 										| модели развития. Значимость этих проблем настолько очевидна,
 										| что новая модель организационной
-										a.more-info(href='#' alt='больше') ...
+										a.podrobn-link(href='#' alt='больше') ...
 					.news-page-news
 						//- Новости
 						-for(var j=1;j<=3;j++)
 							.news-block
 								.news__img-line
-									.news-img
-										img(src='img/news.jpg' alt='news')
+									if (j!=2 && j!=3)
+										.news-img
+											img(src='img/news.jpg' alt='news')
 									.news__img-line_datails
 										.news-date 21.02.2016
 										a(href='#' alt='читать новость').news-title Заголовок статьи
@@ -53,7 +55,7 @@ block main
 										| структура организации играет важную роль в формировании
 										| модели развития. Значимость этих проблем настолько очевидна,
 										| что новая модель организационной
-										a.more-info(href='#' alt='больше') ...
+										a.podrobn-link(href='#' alt='больше') ...
 					.picture-page-news
 						//- Большая картинка со стороны
 						.picture-page-news__img(style='background-image: url("../img/news-image.jpg")')
@@ -67,11 +69,12 @@ block main
 		//- Блок с новостями БЕЗ картинки со стороны
 		.container
 			.news__wrap-without-pictures
-				-for(var j=1;j<=3;j++)
+				-for(var j=1;j<=4;j++)
 					.news-block
 						.news__img-line
-							.news-img
-								img(src='img/news.jpg' alt='news')
+							if (j!=3 && j!=4)
+								.news-img
+									img(src='img/news.jpg' alt='news')
 							.news__img-line_datails
 								.news-date 21.02.2016
 								a(href='#' alt='читать новость').news-title Заголовок статьи

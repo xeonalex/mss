@@ -8,6 +8,8 @@ $(document).ready(function(){
     var h=d[g]('body')[0];
     h.appendChild(s);
   }})();
+
+  
   $('.init_block').on('click', function(event) {
     event.stopPropagation();
     $(this).next().stop(true, true).slideToggle();

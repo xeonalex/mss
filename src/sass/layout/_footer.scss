@@ -52,6 +52,9 @@
 			margin-bottom: 15px;
 			line-height: 18px;
 			@include clearfix();
+			.h4{
+				margin-bottom: 5px;
+			}
 		}
 		&-item{
 			display: inline-block;
