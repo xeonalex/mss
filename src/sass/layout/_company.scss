@@ -437,7 +437,7 @@
 		.h1-und{
 			color: white;
 		}
-		margin-bottom: 45px;
+		margin-bottom: 22px;
 	}
 	.img-item{
 		margin-bottom: 0 !important;
@@ -447,6 +447,14 @@
 	}
 	.owl-dot.active{
 		background: #fff !important;
+	}
+	.gallery-banners{
+		.img-wrap {
+			margin-top: 0;
+			.img-item{
+				margin-top: 0;
+			}
+		}
 	}
 }
 
