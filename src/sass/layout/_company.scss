@@ -102,7 +102,7 @@
 
 .accred-sertif{
 	position: relative;
-		&:before{
+	&:before{
 			position: absolute;
 			content: '';
 			display: block;
@@ -111,11 +111,20 @@
 			left: -250%;
 			bottom: 0;
 			background: #e9fcf2;
-			-webkit-box-shadow: 0px 6px 5px -2px rgba(202,204,207,1);
-			-moz-box-shadow: 0px 6px 5px -2px rgba(202,204,207,1);
-			box-shadow: 0px 6px 5px -2px rgba(202,204,207,1);
 			z-index:-2;
 			@include border-radius(5px);
+	}
+	&:after{
+		display: inline-block;
+		position: absolute;
+		content: '';
+		width: 200%;
+		top:100%;
+		right: 0%;
+		height: 30px;
+		background: url('../img/icons/block-shadow.png');
+		background-repeat: no-repeat;
+		background-position: 100% 0;
 	}
 }
 .accred-text-wrap{
@@ -345,16 +354,20 @@
 		line-height: 28px;
 		left: 0;
 		&:hover{
-			background: rgba(255, 255, 255, 0.3);
+			background: $dark;
+			&:after{
+				border-color: transparent #fff transparent transparent;
+			}
 		}
 		&:after{
 			display: inline-block;
 			content: '';
-			width: 7px;
-			height: 13px;
-			background: url('../img/icons/arrov_grey.png') no-repeat;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 6.5px 6px 6.5px 0;
+			border-color: transparent $dark transparent transparent;
 			vertical-align: middle;
-			@include rotate(180);
 		}
 
 	}
@@ -366,7 +379,11 @@
 		line-height: 14px;
 		font-family: 'ubuntumedium';
 		&:hover{
-			background: rgba(255, 255, 255, 0.3);
+			background: $dark;
+			color: #fff;
+			&:after{
+				border-color: transparent transparent transparent #fff;
+			}
 		}
 		@include border-radius(4px);
 		right: 0;
@@ -378,9 +395,11 @@
 		&:after{
 			display: inline-block;
 			content: '';
-			width: 7px;
-			height: 13px;
-			background: url('../img/icons/arrov_grey.png') no-repeat;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 6.5px 0 6.5px 6px;
+			border-color: transparent transparent transparent $dark;
 			vertical-align: middle;
 			margin-left: 5px;
 		}
@@ -401,8 +420,19 @@
 
 
 .our-partners{
-	background: rgba(47, 163, 119, 0.8);
 	padding: 70px;
+	position: relative;
+	&:before{
+		z-index: -11;
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		background: rgb(47, 163, 119);
+	}
 	.partners__title{
 		.h1-und{
 			color: white;
@@ -477,7 +507,7 @@
 		&:hover{
 			color: $green-header;
 			&:after{
-				border-color: $green transparent transparent transparent;
+				// border-color: $green transparent transparent transparent;
 			}
 		}
 	}
@@ -486,9 +516,18 @@
 		display: none;
 		background: #f9f9fa;
 		padding: 30px;
-		box-shadow: 0 6px 5px -2px #cacccf;
 		@include border-bottom-radius(4px)
+		position: relative;
 	    color: #434a54;
+	    &:after{
+	    	content: '';
+	    	position: absolute;
+			top: 100%;
+			width: 100%;
+			left: 0;
+			height: 42px;
+			background: url('../img/icons/accord-shadow.png') center center no-repeat;
+	    }
 	}
 	.accord-active{
 		.accord-mth__init{
@@ -500,7 +539,7 @@
 				@include rotate(180);
 			}
 			&:hover{
-				color: white;
+				color: $dark;
 				background-image: -moz-linear-gradient( 0deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
 				background-image: -webkit-linear-gradient( 0deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);
 				background-image: -ms-linear-gradient( 0deg, rgb(107,238,167) 0%, rgb(87,224,159) 46%, rgb(67,210,151) 100%);

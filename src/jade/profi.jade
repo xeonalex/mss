@@ -11,16 +11,16 @@ block main
 			.profi-list__title
 				h1.h1
 					| Специалисты
-			ul.specialist__list
+			.specialist__list
 				-for (var j=1;j<=8;j++)
-					li.specialist-wrap
+					a(href='#spec#{j}').specialist-wrap
 						.specialist__img-wrap
 							img(src='img/content/specialist.png')
 						.specialist__name
 							| Фамилия Имя
 						.specialist__data
 							| Специальность
-		.profi-wrap
+		.profi-wrap#spec1
 			.profi-header-line
 				.container
 					.profi__name
@@ -54,7 +54,7 @@ block main
 								li.profi-sertificat-wrap
 									a(href='img/content/accred1.jpg' data-lightbox="sertificat-gallery-profi-1").profi-sertificat__img-wrap.light-b__init
 										img(src='img/content/accred1.jpg')
-		.profi-wrap
+		.profi-wrap#spec2
 			.profi-header-line
 				.container
 					.profi__name

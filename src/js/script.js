@@ -8,6 +8,9 @@ $(document).ready(function(){
     var h=d[g]('body')[0];
     h.appendChild(s);
   }})();
+
+
+ // Выпадающее меню
   $('.init_block').on('click', function(event) {
     event.stopPropagation();
     $(this).next().stop(true, true).slideToggle();
@@ -19,7 +22,15 @@ $(document).ready(function(){
       });
     }
 	});
+// Плавная прокрутка к якорю
+$('a[href^="#"]').click(function(){
+//Сохраняем значение атрибута href в переменной:
+var target = $(this).attr('href');
+$('html, body').animate({scrollTop: $(target).offset().top}, 1000);
+return false;
+});
 
+// Слайдер на главной странице
 	$('.carousel-main').owlCarousel({
   	items: 1,
   	nav: true,
@@ -80,7 +91,7 @@ $('.ques-btn').add('.take-call').on('click',function(event){
   });
 });
 $('.promezhutuslugi__init-left').on('click',function(){
-    var left=$('.promezhutuslugi__wrap').offset().left-70;
+    var left=$('.promezhutuslugi__wrap').offset().left-87;
   if ($(this).hasClass('active')){
     $('.promezhutuslugi__left-block').animate({
         left: left+'px'
@@ -112,7 +123,7 @@ $('.promezhutuslugi__init-left').on('click',function(){
     $('.promezhutuslugi__left-block')
     .animate({
             width: "30px",
-            left: "-48px"
+            left: "-87px"
         },
         {duration: 1000,
             complete:  function(){ $(this).css({
@@ -122,7 +133,7 @@ $('.promezhutuslugi__init-left').on('click',function(){
     })
     .animate({
         left: '0',
-    }, {duration: 500});
+    }, {duration: 1000});
   }
   $(this).toggleClass('active'); // добавляем активный класс для слежки
 });
