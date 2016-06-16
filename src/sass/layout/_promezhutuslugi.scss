@@ -85,7 +85,7 @@
 	padding: 20px;
 	@include font-size(12px);
 	@include clearfix();
-	@include border-radius(3px);
+	@include border-radius(4px);
 	position: relative;
 	&:after{
 	    display: inline-block;
@@ -156,6 +156,7 @@
 // Клас для отображения в одну колонку
 .single-block{
 	width: 100%;
+	border-top: 4px solid red;	
 }
 // Клас для отображения в две колонки
 // Первая колонка - .first-block, вторая - .second-block
@@ -169,6 +170,6 @@
 	.second-block{
 		width: 48%;
 		float: right;
-		border-left: 2px solid $lightgray;
+		border-left: 1px solid $lightgray;
 		padding-left: 20px;
 	}
