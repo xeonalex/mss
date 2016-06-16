@@ -87,27 +87,34 @@
 	@include clearfix();
 	@include border-radius(3px);
 	position: relative;
-}
-.promezhutuslugi__right-block:after, .promezhutuslugi__right-block:before {
-	right: 100%;
-	top: 50px;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-}
+	&:after{
+	    display: inline-block;
+	    position: absolute;
+	    content: '';
+	    width: 100%;
+	    top: 100%;
+	    left: 0;
+	    height: 30px;
+	    background: url(../img/icons/block-shadow.png);
+	    background-repeat: no-repeat;
+	    background-position: top center;
+	}
 
-.promezhutuslugi__right-block:after {
-	border-right-color: #f9f9fa;
-	border-width: 30px;
-	margin-top: -30px;
-}
-.promezhutuslugi__right-block:before {
-	border-right-color: #f9f9fa;
-	border-width: 31px;
-	margin-top: -31px;
+	.arrow{
+		position: absolute;
+			right: 100%;
+			top: 50px;
+			border: solid transparent;
+			height: 0;
+			width: 0;
+			pointer-events: none;
+			border-right-color: #f9f9fa;
+			border-width: 30px;
+			margin-top: -30px;
+			// border-right-color: #f9f9fa;
+			// border-width: 31px;
+			// margin-top: -31px;
+	}
 }
 
 .uslugi{

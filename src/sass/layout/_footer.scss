@@ -8,7 +8,6 @@
 		&-link{
 			display: inline-block;
 			vertical-align: middle;
-			margin-right: 10px;
 		}
 		&-wrap{
 			padding: 113.5px 0;
@@ -18,7 +17,9 @@
 		&-img{
 			width: 123px;
 			height: 123px;
-			float: left;
+			margin-right: 10px;
+			display: inline-block;
+			vertical-align: middle;
 		}
 		&-dscr{
 			@include font-size(14px);
@@ -88,6 +89,11 @@
 		line-height: 18px;
 		&:last-child{
 			margin-bottom: 0;
+		}
+	}
+	&__link{
+		&:hover{
+			text-decoration: underline;
 		}
 	}
 }
