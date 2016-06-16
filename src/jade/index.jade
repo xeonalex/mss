@@ -2,30 +2,25 @@ extends _layout.jade
 block main
 	.carousel-wrap
 		div(class="carousel-main")
-			.item
-				img.slider-content_bg(src='img/slider-content_bg1.jpg')
-				.slider-content-wrap
-					.slider-content
-						.slider-title-wrap
-							h2.slider-title
-							h3.slider-title ISO 91-2080...
-						.slider__content-nav
-							a.slider-buy.button-mth_green(href='#' alt='Заказать')
-								| Заказать
-							a.slider-details.button-mth_dbgreen(href='#' alt='Подробнее')
-								|Подробнее
-			.item
-				img.slider-content_bg(src='img/slider-content_bg1.jpg')
-				.slider-content-wrap
-					.slider-content
-						.slider-title-wrap
-							h2.slider-title Сертификация
-							h3.slider-title ISO 9001-2015...
-						.slider__content-nav
-							a.slider-buy.button-mth_green(href='#' alt='Заказать')
-								| Заказать
-							a.slider-details.button-mth_dbgreen(href='#' alt='Подробнее')
-								|Подробнее
+			-var titles=['Сертификация ISO','Внедрение ISO,','Сертификация продукции','Сертификация ХАССП'];
+			-var titles2=['9001-2015...','разработка документации','',''];
+			-var subtitle=['','','ГОСТ Р, ТР/ТС, Пожарная сертификация',''];
+			-for (var x=0;x<4;x++)
+				.item
+					img.slider-content_bg(src='img/slider-content_bg#{x+1}.jpg')
+					.slider-content-wrap
+						.slider-content
+							.slider-title-wrap
+								h2.slider-title #{titles[x]}
+									if titles2[x]!=''
+										| <br> #{titles2[x]}
+								if subtitle[x]!=''
+									.slider-subtitle #{subtitle[x]}
+							.slider__content-nav
+								a.slider-buy.button-mth_green(href='#' alt='Заказать')
+									| Заказать
+								a.slider-details.button-mth_dbgreen(href='#' alt='Подробнее')
+									|Подробнее
 	section.about-company
 		.container-inner
 			.section__title
