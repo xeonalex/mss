@@ -30,6 +30,9 @@
 			display: inline-block;
 			margin-right: 22px;
 			border-radius: 3px;
+			&:hover{
+				background: #29d694;
+			}
 		}
 		.owl-dot.active{
 			background: #6beea7;

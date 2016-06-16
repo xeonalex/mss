@@ -9,6 +9,12 @@ $(document).ready(function(){
     h.appendChild(s);
   }})();
 
+  // Последние новости
+  $('.last-news').on('mouseenter', '.news-wrap, .publications-wrap', function(event) {
+      $('.last-news').find('.active').toggleClass('active');
+      $(this).addClass('active');
+  });
+
  // Выпадающее меню
   $('.init_block').on('click', function(event) {
     event.stopPropagation();
@@ -22,12 +28,12 @@ $(document).ready(function(){
     }
 	});
 // Плавная прокрутка к якорю
-$('a[href^="#"]').click(function(){
-//Сохраняем значение атрибута href в переменной:
-var target = $(this).attr('href');
-$('html, body').animate({scrollTop: $(target).offset().top}, 1000);
-return false;
-});
+// $('a[href^="#"]').click(function(){
+// //Сохраняем значение атрибута href в переменной:
+// var target = $(this).attr('href');
+// $('html, body').animate({scrollTop: $(target).offset().top}, 1000);
+// return false;
+// });
 
 // Слайдер на главной странице
 	$('.carousel-main').owlCarousel({
@@ -137,9 +143,25 @@ $('.promezhutuslugi__init-left').on('click',function(){
   $(this).toggleClass('active'); // добавляем активный класс для слежки
 });
 // позиционируем стрелку относительно активного пункта меню
-var activeSideMenu = $('.promezhutuslugi__left-block .menu-promezhutuslugi__item')
-    .index($('.menu-promezhutuslugi__item_active')) + 1;
-// $('.promezhutuslugi__right-block')
+function changeArrowPos(item){
+    $('.menu-promezhutuslugi__item_active').toggleClass('menu-promezhutuslugi__item_active');
+    item.addClass('menu-promezhutuslugi__item_active');
+    var itemParam=item.position();
+    var itemHeight=item.outerHeight();
+    item.closest('.promezhutuslugi__content-wrap').find('.arrow')
+      .css({
+        top: itemParam.top+(itemHeight/2)
+      });
+}
+// позиционируем сразу при загрузке странице
+if ($('.promezhutuslugi__content-wrap').find('.menu-promezhutuslugi__item_active').length!=0) {
+  changeArrowPos($('.promezhutuslugi__content-wrap').find('.menu-promezhutuslugi__item_active')) ;
+}
+// позиц при клике
+$('.menu-promezhutuslugi__item').on('click',function(){
+  changeArrowPos($(this));
+});
+
 
   // конец READY
 });

@@ -98,6 +98,7 @@
 	    background: url(../img/icons/block-shadow.png);
 	    background-repeat: no-repeat;
 	    background-position: top center;
+	    background-size: contain;
 	}
 
 	.arrow{
@@ -156,7 +157,7 @@
 // Клас для отображения в одну колонку
 .single-block{
 	width: 100%;
-	border-top: 4px solid red;	
+	border-top: 4px solid red;
 }
 // Клас для отображения в две колонки
 // Первая колонка - .first-block, вторая - .second-block
