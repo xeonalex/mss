@@ -4,7 +4,22 @@
 .contacts__map{
 	float: right;
 	height: 570px;
-	width: 780px;
+	width: 50%;
+	position: absolute;
+	right: 	0;
+	&:before{
+		display: inline-block;
+		position: absolute;
+		content: '';
+		background: url(../img/icons/block-shadow-left.png);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		left: 0;
+		width: 30px;
+		height: 100%;
+		z-index: 10;
+	}
 }
 .contacts__adress{
 	padding-left: 80px;
@@ -69,6 +84,7 @@
 }
 .contacts__adress-map{
 	margin-bottom: 65px;
+	min-height:570px; 	
 }
 .wrap-to-clearfix{
 	@include clearfix();
