@@ -9,7 +9,6 @@ $(document).ready(function(){
     h.appendChild(s);
   }})();
 
-
  // Выпадающее меню
   $('.init_block').on('click', function(event) {
     event.stopPropagation();

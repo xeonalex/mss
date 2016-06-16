@@ -116,6 +116,9 @@
 	}
 	&__item{
 		margin-bottom: 20px;
+		.title-uslugi__link{
+			text-decoration: underline;
+		}
 	}
 	&__item:last-child{
 		margin-bottom: 0;
