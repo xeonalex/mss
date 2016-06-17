@@ -28,12 +28,14 @@ $(document).ready(function(){
     }
 	});
 // Плавная прокрутка к якорю
-// $('a[href^="#"]').click(function(){
-// //Сохраняем значение атрибута href в переменной:
-// var target = $(this).attr('href');
-// $('html, body').animate({scrollTop: $(target).offset().top}, 1000);
-// return false;
-// });
+$('a[href^="#"]').click(function(){
+//Сохраняем значение атрибута href в переменной:
+var target = $(this).attr('href');
+if(target!='#') {
+  $('html, body').animate({scrollTop: $(target).offset().top}, 1000);
+  return false;
+}
+});
 
 // Слайдер на главной странице
 	$('.carousel-main').owlCarousel({

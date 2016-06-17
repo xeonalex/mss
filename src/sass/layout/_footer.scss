@@ -109,16 +109,21 @@
 		}
 	}
 	&__link{
-		background-image: url('../img/icons/soc-icons.png');
 		background-repeat: no-repeat;
 		width: 32px;
 		height: 32px;
 		display: block;
 		&_fb{
-			background-position: -5px -5px;
+			background: url('../img/icons/fb.svg');
+			&:hover{
+				background: url('../img/icons/fb-square.svg');
+			}
 		}
 		&_vk{
-			background-position: -47px -5px;
+			background: url('../img/icons/vk.svg');
+			&:hover{
+				background: url('../img/icons/vk-square.svg');
+			}
 		}
 	}
 }
