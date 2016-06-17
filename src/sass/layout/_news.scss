@@ -102,15 +102,15 @@
 		text-align: center;
 		padding-top: 1px;
 		@include border-radius(5px);
-		@include transition(0.25s);
 		user-select: none;
 		-moz-user-select: none;
 		-webkit-user-select: none;
 		color: $dark;
-		&:hover {
-			background: #f1f1f1;
-		}
 		&.active{
+			background: $dark;
+			color: #fff;
+		}
+		&:hover{
 			background: $dark;
 			color: #fff;
 		}
@@ -125,4 +125,14 @@
 		}
 	}
 
+}
+.pagination-link.prev:hover{
+	@include rotate(180);
+	background: url('../img/icons/arrow-border-h.png') no-repeat;
+	background-size: cover;
+}
+.pagination-link.next:hover{
+	@include rotate(0);
+	background: url('../img/icons/arrow-border-h.png') no-repeat;
+	background-size: cover;
 }

@@ -493,6 +493,11 @@
 				background-image: url("../img/more-links.png");
 				margin-left: 7px;
 			}
+			&:hover{
+				&:after{
+				background: url('../img/icons/arrow-border-h.png') no-repeat;
+				}
+			}
 			span{
 				vertical-align: middle;
 				line-height: 20px;
