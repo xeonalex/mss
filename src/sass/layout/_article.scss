@@ -51,6 +51,9 @@
 			.owl-dot.active{
 				background: #6beea7;
 			}
+			.owl-dot:hover{
+				background: #6beea7;
+			}
 		}
 		&-item{
 			border: 5px solid dotted #000;
@@ -58,7 +61,7 @@
 			height: 390px;
 		}
 		&-dscr{
-			width: 58%;
+			width: 56%;
 			float: right;
 		}
 	}

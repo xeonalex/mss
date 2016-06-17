@@ -114,15 +114,19 @@
 		height: 32px;
 		display: block;
 		&_fb{
-			background: url('../img/icons/fb.svg');
+			background: url('../img/icons/fb-square.svg');
+			@include opacity(0.8);
 			&:hover{
 				background: url('../img/icons/fb-square.svg');
+				@include opacity(1);
 			}
 		}
 		&_vk{
-			background: url('../img/icons/vk.svg');
+			background: url('../img/icons/vk-square.svg');
+			@include opacity(0.8);
 			&:hover{
 				background: url('../img/icons/vk-square.svg');
+				@include opacity(1);
 			}
 		}
 	}
