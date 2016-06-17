@@ -60,7 +60,7 @@
 
 	}
 	&__item{
-		margin-bottom: 30px;
+		margin-bottom: 23px;
 	}
 	&__item:last-child{
 		margin-bottom: 0;
@@ -120,7 +120,7 @@
 
 .uslugi{
 	&__list{
-
+		
 	}
 	&__item{
 		margin-bottom: 20px;
@@ -165,12 +165,13 @@
 	@include clearfix();
 }
 	.first-block{
-		width: 48%;
+		width: 46%;
 		float:left;
+		padding-right: 20px;
 	}
 	.second-block{
-		width: 48%;
-		float: right;
+		width: 50%;
+		float: left;
 		border-left: 1px solid $lightgray;
 		padding-left: 20px;
 	}
