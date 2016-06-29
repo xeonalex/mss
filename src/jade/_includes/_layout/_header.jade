@@ -112,10 +112,18 @@ header.header
 	h2.popup-title
 		| Заказать звонок
 	form.popup-form
-		label
-			input.popup-input(type="text" name="name" placeholder="Введите имя")
-		label
-			input.popup-input(type="text" name="phone" placeholder="Введите телефон")
+		.item-input
+			input(id='name' type='text' placeholder='Введите имя' ).popup-input
+			label(for='name').contacts-form__label-form
+				span Введите имя
+		.item-input
+			input(id='phone' type='text' placeholder='Введите телефон' ).popup-input
+			label(for='phone').contacts-form__label-form
+				span Введите телефон
+		//- label
+		//- 	input.popup-input(type="text" name="name" placeholder="Введите имя")
+		//- label
+		//- 	input.popup-input(type="text" name="phone" placeholder="Введите телефон")
 		button.popup-smbt.button-mth_green(type="submit" value="Заказать звонок")
 			| Заказать звонок
 		.close-popup__make-call

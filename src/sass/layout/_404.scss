@@ -1,0 +1,39 @@
+.title-404  {
+	font-size: 200px;
+    font-family: 'ubuntumedium';
+    padding-left: 11px;
+    padding-right:40px;
+    color: #2fa377;
+    position: relative;
+    z-index: -11;
+    line-height: 200px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.wrap-404{
+    margin-top: 79px;
+	margin-bottom: 80px;
+	.simple-link {
+	    font-family: 'ubunturegular';
+	    text-decoration: underline;
+	    display: inline;
+	    margin: 0 5px;
+	    &:hover{
+	    	text-decoration: none;
+	    }
+	}
+
+}
+.text-404 {
+	line-height: 20px;
+	display: inline-block;
+	vertical-align: middle;
+	width: 305px;
+	padding: 15px;
+	p {
+		margin-top: 25px;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+}

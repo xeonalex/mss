@@ -1,0 +1,18 @@
+extends _layout.jade
+block main
+	.container
+		.breadcrumbs
+			ul.breadcrumbs__list
+				li.breadcrumbs__item
+					a.breadcrumbs__link(href="#") Главная
+				li.breadcrumbs__item
+					a.breadcrumbs__link.breadcrumbs__link_active(href="#") Ошибка 404
+		.wrap-404
+			span.title-404 404
+			.text-404
+				p Неправильно набран адрес, или такой страницы на сайте больше не существует.
+				p Возможно, то что вы ищите на
+					a.simple-link(href='index.html' alt='главной странице' title='главной странице') главной странице
+					| или в разделе
+					a.simple-link(href='uslugi.html' alt='услуги' title='услуги') услуги.
+
