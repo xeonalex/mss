@@ -44,37 +44,60 @@ block main
 								a(href="#").menu-promezhutuslugi__link Повышение квалификации
 					.promezhutuslugi__right-block
 						//- Блок с контентом
-						.arrow
-						.duoble-block
-							//- Клас для отображения контента в две колонки, первой колонке нужно дать клас .first-block а второй .second-block
-							.first-block
+						.promezhutuslugi__right-block_inner
+							.arrow
+							.duoble-block
+								//- Клас для отображения контента в две колонки, первой колонке нужно дать клас .first-block а второй .second-block
+								.first-block
+									ul.uslugi__list
+										//- Список услуг
+										li.uslugi__item
+											a(href="#").title-uslugi__link ХАССП
+											ul.poduslugi__list
+												//- Список подуслуг
+												li.poduslugi__item
+													a(href="#").poduslugi__link ГОСТ Р ИСО 22000 - 2007 (ISO 22000:2005) «Системы менеджмента безопасности пищевой продукции»
+												li.poduslugi__item
+													a(href="#").poduslugi__link ГОСТ Р 54762-2011/ISO/TS 22002-1:2009 «Программы предварительных требований по безопасности пищевой продукции
+												li.poduslugi__item
+													a(href="#").poduslugi__link ГОСТ Р 51705.1-2001 - Системы качества. Управление качеством пищевых продуктов на основе принципов ХАССП Общие требования
+										li.uslugi__item
+											a(href="#").title-uslugi__link ХАССП
+											ul.poduslugi__list
+												//- Список подуслуг
+												li.poduslugi__item
+													a(href="#").poduslugi__link ГОСТ Р ИСО 22000 - 2007 (ISO 22000:2005) «Системы менеджмента безопасности пищевой продукции»
+												li.poduslugi__item
+													a(href="#").poduslugi__link ГОСТ Р 54762-2011/ISO/TS 22002-1:2009 «Программы предварительных требований по безопасности пищевой продукции
+												li.poduslugi__item
+													a(href="#").poduslugi__link ГОСТ Р 51705.1-2001 - Системы качества. Управление качеством пищевых продуктов на основе принципов ХАССП Общие требования
+								.second-block
+									ul.uslugi__list
+										//- Список услуг
+										li.uslugi__item
+											a(href="#").uslugi__link ГОСТ Р ИСО 9001 - 2015 (ISO 9001:2015) «Системы менеджмента качества»
+										li.uslugi__item
+											a(href="#").uslugi__link Интегрированные системы менеджмента
+										li.uslugi__item
+											a(href="#").uslugi__link ГОСТ Р ИСО 22000 - 2007 (ISO 22000:2005) «Системы менеджмента безопасности пищевой продукции»
+										li.uslugi__item
+											a(href="#").uslugi__link ГОСТ Р ИСО/ТУ 16949-2009 (ГОСТ Р 51814.1-2004) «Требования к системе менеджмента качества в автомобильной промышленности и организациях, производящих соответствующие запасные части»
+										li.uslugi__item
+											a(href="#").uslugi__link ГОСТ Р ИСО 13485-2011 (ISO 13485:2003) «Изделия медицинские. Системы менеджмента качества. Системные требования для целей регулирования»
+										li.uslugi__item
+											a(href="#").uslugi__link ГОСТ РВ 0015-002-2012 «Система менеджмента предприятий оборонно-промышленного комплекса. Защита государственной тайны»
+										li.uslugi__item
+											a(href="#").uslugi__link ГОСТ Р ИСО/МЭК 20000 (ISO 20000) «Адаптация международного стандарта ISO 20000 под российский рынок
+										li.uslugi__item
+											a(href="#").uslugi__link ГОСТ Р ИСО/ТУ 29001-2007 «Система менеджмента качества организаций, поставляющих продукцию и предоставляющих услуги в нефтяной, нефтехимической и газовой промышленности»
+										li.uslugi__item
+											a(href="#").uslugi__link ГОСТ Р ЕН 9100-2011 «Системы менеджмента качества организаций авиационной, космической и оборонных отраслей промышленности»
+							.single-block
+								//- Клас для отображения контента в одну колонку
 								ul.uslugi__list
 									//- Список услуг
 									li.uslugi__item
-										a(href="#").title-uslugi__link ХАССП
-										ul.poduslugi__list
-											//- Список подуслуг
-											li.poduslugi__item
-												a(href="#").poduslugi__link ГОСТ Р ИСО 22000 - 2007 (ISO 22000:2005) «Системы менеджмента безопасности пищевой продукции»
-											li.poduslugi__item
-												a(href="#").poduslugi__link ГОСТ Р 54762-2011/ISO/TS 22002-1:2009 «Программы предварительных требований по безопасности пищевой продукции
-											li.poduslugi__item
-												a(href="#").poduslugi__link ГОСТ Р 51705.1-2001 - Системы качества. Управление качеством пищевых продуктов на основе принципов ХАССП Общие требования
-									li.uslugi__item
-										a(href="#").title-uslugi__link ХАССП
-										ul.poduslugi__list
-											//- Список подуслуг
-											li.poduslugi__item
-												a(href="#").poduslugi__link ГОСТ Р ИСО 22000 - 2007 (ISO 22000:2005) «Системы менеджмента безопасности пищевой продукции»
-											li.poduslugi__item
-												a(href="#").poduslugi__link ГОСТ Р 54762-2011/ISO/TS 22002-1:2009 «Программы предварительных требований по безопасности пищевой продукции
-											li.poduslugi__item
-												a(href="#").poduslugi__link ГОСТ Р 51705.1-2001 - Системы качества. Управление качеством пищевых продуктов на основе принципов ХАССП Общие требования
-							.second-block
-								ul.uslugi__list
-									//- Список услуг
-									li.uslugi__item
-										a(href="#").uslugi__link ГОСТ Р ИСО 9001 - 2015 (ISO 9001:2015) «Системы менеджмента качества»
+										a(href="#").uslugi__link Тоесть так должно быть, если нет пунктов с подпунктами ?
 									li.uslugi__item
 										a(href="#").uslugi__link Интегрированные системы менеджмента
 									li.uslugi__item
@@ -82,38 +105,6 @@ block main
 									li.uslugi__item
 										a(href="#").uslugi__link ГОСТ Р ИСО/ТУ 16949-2009 (ГОСТ Р 51814.1-2004) «Требования к системе менеджмента качества в автомобильной промышленности и организациях, производящих соответствующие запасные части»
 									li.uslugi__item
-										a(href="#").uslugi__link ГОСТ Р ИСО 13485-2011 (ISO 13485:2003) «Изделия медицинские. Системы менеджмента качества. Системные требования для целей регулирования»
-									li.uslugi__item
-										a(href="#").uslugi__link ГОСТ РВ 0015-002-2012 «Система менеджмента предприятий оборонно-промышленного комплекса. Защита государственной тайны»
-									li.uslugi__item
-										a(href="#").uslugi__link ГОСТ Р ИСО/МЭК 20000 (ISO 20000) «Адаптация международного стандарта ISO 20000 под российский рынок
-									li.uslugi__item
-										a(href="#").uslugi__link ГОСТ Р ИСО/ТУ 29001-2007 «Система менеджмента качества организаций, поставляющих продукцию и предоставляющих услуги в нефтяной, нефтехимической и газовой промышленности»
-									li.uslugi__item
-										a(href="#").uslugi__link ГОСТ Р ЕН 9100-2011 «Системы менеджмента качества организаций авиационной, космической и оборонных отраслей промышленности»
-						.single-block
-							//- Клас для отображения контента в одну колонку
-							ul.uslugi__list
-								//- Список услуг
-								li.uslugi__item
-									a(href="#").uslugi__link Тоесть так должно быть, если нет пунктов с подпунктами ?
-								li.uslugi__item
-									a(href="#").uslugi__link Интегрированные системы менеджмента
-								li.uslugi__item
-									a(href="#").uslugi__link ГОСТ Р ИСО 22000 - 2007 (ISO 22000:2005) «Системы менеджмента безопасности пищевой продукции»
-								li.uslugi__item
-									a(href="#").uslugi__link ГОСТ Р ИСО/ТУ 16949-2009 (ГОСТ Р 51814.1-2004) «Требования к системе менеджмента качества в автомобильной промышленности и организациях, производящих соответствующие запасные части»
-								li.uslugi__item
-									a(href="#").uslugi__link ГОСТ Р ИСО 13485-2011 (ISO 13485:2003) «Изделия медицинские. Системы менеджмента качества. Системные требования для целей регулирования»
-								//- li.uslugi__item
-								//- 	a(href="#").uslugi__link ХАССП
-								//- 	ul.poduslugi__list
-								//- 		//- Список подуслуг
-								//- 		li.poduslugi__item
-								//- 			a(href="#").poduslugi__link ГОСТ Р ИСО 22000 - 2007 (ISO 22000:2005) «Системы менеджмента безопасности пищевой продукции»
-								//- 		li.poduslugi__item
-								//- 			a(href="#").poduslugi__link ГОСТ Р 54762-2011/ISO/TS 22002-1:2009 «Программы предварительных требований по безопасности пищевой продукции
-								//- 		li.poduslugi__item
-								//- 			a(href="#").poduslugi__link ГОСТ Р 51705.1-2001 - Системы качества. Управление качеством пищевых продуктов на основе принципов ХАССП Общие требования
-
-
+										a(href="#").uslugi__link ГОСТ Р ИСО 13485-2011 (ISO 13485:2003) «Изделия медицинские. Системы менеджмента качества. Системные требования для
+						.promezhutuslugi__right-block_text-wrap
+							|  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident odio, voluptas aliquam laudantium inventore numquam a quam, ea distinctio blanditiis minus unde quos magnam cupiditate pariatur? Quae ratione in ipsa ipsam, nostrum, similique sequi at molestiae, debitis quaerat nesciunt aliquam perferendis? Nulla illo suscipit, doloremque expedita ad fugit rerum nisi quo nam iste labore magni incidunt iure totam libero possimus excepturi quam, deleniti? Quod nesciunt fugiat, aspernatur cum neque, facere non nam ducimus alias fuga molestias sit, et velit earum!

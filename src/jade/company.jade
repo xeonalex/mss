@@ -66,9 +66,9 @@ block main
 				| системы добровольной сертификации «Международная Система Сертификации».
 		.specialists
 			.container
-				ul.specialist__list
+				.specialist__list
 					-for (var j=1;j<=4;j++)
-						li.specialist-wrap
+						a(href='profi.html').specialist-wrap
 							.specialist__img-wrap
 								img(src='img/content/specialist1.png')
 							.specialist__name
@@ -84,7 +84,7 @@ block main
 				ul.sertificats__list
 					-for (var j=1;j<=5;j++)
 						li.sertificat-wrap
-							a(href='img/content/spec-img.jpg' data-lightbox="sertificat-gallery").sertificat__img-wrap.light-b__init
+							a(href='img/content/accred1.jpg' data-lightbox="sertificat-gallery").sertificat__img-wrap.light-b__init
 								img(src='img/content/accred1.jpg')
 	.feedbacks-wrap
 		.feedbacks__title.container
@@ -113,9 +113,9 @@ block main
 							.feedback__author-photo
 								img(src='img/content/specialist.png')
 						ul.feedback__img-block
-							li.feedback__img-wrap
+							a(href='img/content/accred1.jpg' data-lightbox='orel0').feedback__img-wrap.light-b__init
 								img(src='img/content/accred1.jpg')
-							li.feedback__img-wrap
+							a(href='img/content/accred2.jpg' data-lightbox='orel0').feedback__img-wrap.light-b__init
 								img(src='img/content/accred2.jpg')
 				.item
 					.feedback__company-name
@@ -132,9 +132,9 @@ block main
 						.feedback__author-photo
 							img(src='img/content/specialist1.png')
 					ul.feedback__img-block
-						li.feedback__img-wrap
+						a(href='img/content/accred2.jpg' data-lightbox="orel1").feedback__img-wrap.light-b__init
 							img(src='img/content/accred2.jpg')
-						li.feedback__img-wrap
+						a(href='img/content/accred1.jpg' data-lightbox="orel1").feedback__img-wrap.light-b__init
 							img(src='img/content/accred1.jpg')
 	.our-partners
 		.container

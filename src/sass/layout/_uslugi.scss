@@ -67,6 +67,8 @@
 	padding-top: 35px;
 	padding-bottom: 35px;
 	display: table;
+	width: 100%;
+	min-height: 140px;
 	border-top: 1px solid #e6e7e9;
 	&:first-of-type{
 		padding-top: 0;
@@ -78,6 +80,7 @@
 	.sert-details-wrap{
 		display: table-cell;
 		width: 175px;
+
 	}
 }
 
