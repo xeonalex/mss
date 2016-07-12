@@ -150,13 +150,13 @@ function changeArrowPos(item){
     item.addClass('menu-promezhutuslugi__item_active');
     var itemParam=item.position();
     var itemHeight=item.outerHeight();
-    // item.closest('.promezhutuslugi__content-wrap').find('.arrow')
-    //   .css({
-    //     top: itemParam.top+(itemHeight/2)
-    //   });
-    item.closest('.promezhutuslugi__content-wrap').find('.promezhutuslugi__right-block').css({
-        "margin-top": itemParam.top-40
+    item.closest('.promezhutuslugi__content-wrap').find('.arrow')
+      .css({
+        top: itemParam.top+(itemHeight/2)
       });
+    // item.closest('.promezhutuslugi__content-wrap').find('.promezhutuslugi__right-block').css({
+    //     "margin-top": itemParam.top-40
+    //   });
 }
 // позиционируем сразу при загрузке странице
 if ($('.promezhutuslugi__content-wrap').find('.menu-promezhutuslugi__item_active').length!=0) {
