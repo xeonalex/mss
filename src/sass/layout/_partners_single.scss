@@ -1,12 +1,24 @@
 .news__title_partners{
-	@include clearfix();
+	margin-bottom: 50px;
 }
 .partners-logo{
-	float: left;
+    display: inline-block;
+    vertical-align: middle;
+    min-width: 280px;
+    text-align: center;
+    img {
+    	display: inline-block;
+
+    }
 }
 .partners-title{
-	margin-top: 70px;
-	margin-left: 300px;
+	margin-left: 40px;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 845px;
+    .h1 {
+    	margin-bottom: 0 !important;
+    }
 }
 .partners-single__descr {
 	text-align: justify;

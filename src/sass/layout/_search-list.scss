@@ -1,0 +1,57 @@
+.search-list {
+
+}
+
+.search-list__title {
+  h1 {
+    @include font-size(40px);
+    display: inline-block;
+    vertical-align: baseline;
+    margin-bottom: .25em;
+  }
+}
+
+.search-list__for {
+  font-weight: 300;
+  @include font-size(14px);
+  margin-left: .75em;
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+.search-list__founded {
+  @include font-size(12px);
+}
+
+.search-list__founded {
+  margin-bottom: 3em;
+}
+
+.search__list {
+  max-width: 70%;
+}
+
+.search__item {
+  display: block;
+  margin-bottom: 3.5em;
+}
+
+.search-item__link {
+  margin-bottom: 1em;
+  color: #434a54;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 1em;
+  display: block;
+  text-decoration: underline;
+  transition: .1s ease-in-out;
+  &:hover {
+    color: #2fa377;
+  }
+}
+
+.search-item__text {
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 1.45;
+}
